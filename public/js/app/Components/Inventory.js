@@ -43,7 +43,7 @@ define(['app/View', 'app/Model/Inventory'], function (View, InventoryModel)
     Inventory.prototype.redraw = function()
     {
         this.render(function(html) {
-            $('.inventory').empty().html(html);
+            $('.inventory').replaceWith(html);
         });
     }
 
