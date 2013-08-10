@@ -7,6 +7,8 @@
 	border: 1px solid #000;
 	
 	overflow: hidden;
+	
+	position: relative;
 }
 
 .ui {
@@ -249,8 +251,8 @@
 	cursor: pointer;
 	
 	position: absolute;
-	top: 84.5%;
-	left: 82%;
+	top: 650px;
+	left: 830px;
 	
 	z-index: 100;
 }

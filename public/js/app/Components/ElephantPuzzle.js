@@ -1,7 +1,7 @@
 /**
  * Elephant puzzle component
  */
-define(['app/View'], function (View)
+define(['app/View', 'app/Model/Inventory'], function (View, Inventory)
 {
     function ElephantPuzzle() {}
 
@@ -17,6 +17,7 @@ define(['app/View'], function (View)
 
     ElephantPuzzle.prototype.render = function(cb)
     {
+    	this.view.hasLeaves = Inventory.hasItem('leaves');
         this.view.fetch('/templates/Components/ElephantPuzzle', 'puzzle').done(cb);
     }
 
