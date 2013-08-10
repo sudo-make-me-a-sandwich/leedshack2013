@@ -94,3 +94,16 @@
 	background-position: center;
 	background-size: cover;
 }
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*\
+    WORLD VIEW
+\*----------------------------------------------------------------------------------------------------------------*/
+.worldView {
+	background: url("../images/scenes/worldView/background.jpg") no-repeat;
+	background-position: center;
+	background-size: cover;
+}
