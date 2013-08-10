@@ -21,7 +21,7 @@
 	bottom: 0;
 	left: 0;
 	
-	z-index: 100;
+	z-index: 50;
 }
 
 .ui .area {
@@ -46,7 +46,7 @@
 	bottom: 15px;
 	left: 25px;
 	
-	z-index: 101;
+	z-index: 51;
 }
 
 .keychain ul {
@@ -93,7 +93,7 @@
 	bottom: 15px;
 	left: 100px;
 	
-	z-index: 101;
+	z-index: 51;
 }
 
 [class*="ui-button-"] {
@@ -170,16 +170,6 @@
 	right: 85px;
 }
 
-.ui-container {
-	width: 600px;
-	padding: 2em;
-	border-radius: 4px;
-	
-	background: rgba(0, 0, 0, 0.7);
-	
-	text-align: center;
-}
-
 .ui-puzzle {
 	width: 500px;
 	margin-left: -250px;
@@ -206,6 +196,21 @@
 	background: url("../images/title/background.jpg") no-repeat;
 	background-position: center;
 	background-size: cover;
+}
+
+.title .welcome {
+	width: 600px;
+	padding: 2em;
+	border-radius: 4px;
+	
+	background: rgba(0, 0, 0, 0.7);
+	
+	text-align: center;
+	color: #fff;
+}
+
+.title .welcome h1 {
+	color: #fff;
 }
 
 .title .description {
@@ -245,7 +250,9 @@
 	
 	position: absolute;
 	top: 84.5%;
-	left: 78%;
+	left: 82%;
+	
+	z-index: 100;
 }
 
 

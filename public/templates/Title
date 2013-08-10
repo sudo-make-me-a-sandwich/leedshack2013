@@ -1,11 +1,13 @@
 <script id="title" type="text/html">
-	<div class="ui-container center-align">
-		<h1>Welcome to the Leeds City Museum</h1>
-		
-		<div class="description">
-			This is an adventure game, in which you explore the museum and solve its mysteries!
+	<div class="gameContainer center-align">
+		<div class="welcome center-align">
+			<h1>Welcome to the Leeds City Museum</h1>
+			
+			<div class="description">
+				This is an adventure game, in which you explore the museum and solve its mysteries!
+			</div>
+			
+			<a class="button" href="#game">Play</a>
 		</div>
-		
-		<a class="button" href="#game">Play</a>
 	</div>
 </script>
