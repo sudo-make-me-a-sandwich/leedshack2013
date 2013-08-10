@@ -75,17 +75,55 @@ define([
 	 */
 	function postRender()
 	{
-		console.log("post render");
-		
 		//centre align things vertically & horizontally
 		$(".center-align").each(function()
         {
-			console.log("align center");
 			$(this).css({
 				"margin-left": "-" + $(this).outerWidth() / 2 + "px",
 				"margin-top": "-" + $(this).outerHeight() / 2 + "px",
 				"position": "absolute",
 				"left": "50%",
+				"top": "50%"
+			});
+        });
+		
+		//align tooltips
+		$(".ui-button-north .tooltip").each(function()
+        {
+			$(this).css({
+				"margin-left": "-" + $(this).outerWidth() / 2 + "px",
+				"position": "absolute",
+				"left": "50%",
+				"top": "100%"
+			});
+        });
+		
+		$(".ui-button-east .tooltip").each(function()
+        {
+			$(this).css({
+				"margin-top": "-" + $(this).outerHeight() / 2 + "px",
+				"position": "absolute",
+				"right": "100%",
+				"top": "50%"
+			});
+        });
+		
+		$(".ui-button-south .tooltip").each(function()
+        {
+			$(this).css({
+				"margin-left": "-" + $(this).outerWidth() / 2 + "px",
+				"position": "absolute",
+				"left": "50%",
+				"bottom": "100%"
+			});
+        });
+		
+		$(".ui-button-west .tooltip").each(function()
+        {
+			$(this).css({
+				"margin-top": "-" + $(this).outerHeight() / 2 + "px",
+				"position": "absolute",
+				"left": "100%",
 				"top": "50%"
 			});
         });

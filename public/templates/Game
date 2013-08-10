@@ -3,7 +3,7 @@
     	<a class="ui-button-north{{#north.locked}} locked{{/north.locked}}" href="#game:{{north.scene.name}}">
     		<img src="/images/ui/north.png" alt="" />
     		<div class="tooltip">
-    			{{north.scene.description}}
+    			{{north.scene.title}}
     		</div>
     	</a>
     {{/north}}
@@ -12,7 +12,7 @@
     	<a class="ui-button-south{{#south.locked}} locked{{/south.locked}}" href="#game:{{south.scene.name}}">
     		<img src="/images/ui/south.png" alt="" />
     		<div class="tooltip">
-    			{{south.scene.description}}
+    			{{south.scene.title}}
     		</div>
     	</a>
     {{/south}}
@@ -21,7 +21,7 @@
         <a class="ui-button-east{{#east.locked}} locked{{/east.locked}}" href="#game:{{east.scene.name}}">
     		<img src="/images/ui/east.png" alt="" />
     		<div class="tooltip">
-    			{{east.scene.description}}
+    			{{east.scene.title}}
     		</div>
     	</a>
     {{/east}}
@@ -30,15 +30,15 @@
         <a class="ui-button-west{{#west.locked}} locked{{/west.locked}}" href="#game:{{west.scene.name}}">
     		<img src="/images/ui/west.png" alt="" />
     		<div class="tooltip">
-    			{{west.scene.description}}
+    			{{west.scene.title}}
     		</div>
     	</a>
     {{/west}}
     
     <div class="ui-container center-align">
-    	<h1>{{scene.description}}</h1>
+    	<h1>{{scene.title}}</h1>
     	
-    	Text about the scene and kittens!!!
+    	{{scene.description}}
     </div>
     {{#components}}{{{.}}}{{/components}}
 </script>
