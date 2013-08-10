@@ -2,7 +2,7 @@
 	<div class="gameContainer center-align">
 		<div class="ui">
 			<div class="area">
-				{{scene.title}}
+				<h1>{{scene.title}}</h1>
 				
 				<div class="description">
 					{{scene.description}}
