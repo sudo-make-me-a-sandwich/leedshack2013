@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Leeds hack 2013 - play</title>
+    <title>Leeds hack 2013</title>
     
     <!-- CSS -->
 	<link href="/css/respond.css" rel="stylesheet" type="text/css" media="screen" />
