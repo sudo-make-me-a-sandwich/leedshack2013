@@ -92,13 +92,13 @@ define([
         this.keyChain = new KeyChainComponent();
         this.keyChain.init();
         this.keyChain.render(function(html){
-            this.view.components.push(html);
+            this.view.uicomponents.push(html);
         }.bind(this));
         
         this.inventory = new Inventory();
         this.inventory.init();
         this.inventory.render(function(html){
-            this.view.components.push(html);
+            this.view.uicomponents.push(html);
         }.bind(this));
     }
 
