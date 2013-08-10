@@ -8,6 +8,7 @@ define(['mustache', 'jquery.mustache'], function(Mustache)
 	{
 		window.Mustache = Mustache;
         this.components = new Array();
+        this.uicomponents = new Array();
 
 		/**
 		 * Returns the rendered content of a template
