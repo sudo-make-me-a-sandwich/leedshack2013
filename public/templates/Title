@@ -1,0 +1,5 @@
+<script id="title" type="text/html">
+	<h1>Title</h1>
+	
+	<a href="#game">Play</a>
+</script>

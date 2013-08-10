@@ -10,7 +10,7 @@ define(['app/Model/Storage'], function(Storage)
 	 * @var array
 	 */
 	var routes = [
-		{hash: 'example', controller: 'Example'},
+		{hash: 'game', controller: 'Game'},
 	];
 	
 	/**
@@ -18,7 +18,7 @@ define(['app/Model/Storage'], function(Storage)
 	 * 
 	 * @var string
 	 */
-	var defaultController = 'Example';
+	var defaultController = 'Title';
 	
 	/**
 	 * Route a request
