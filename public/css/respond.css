@@ -158,6 +158,8 @@ input[type="radio"] {
     DEFAULT TEXT
 \*----------------------------------------------------------------------------------------------------------------*/
 body {  
+	min-width: 800px;
+	
     color: #fff;
     font-family: Arial, sans-serif;
     font-size: 1em;

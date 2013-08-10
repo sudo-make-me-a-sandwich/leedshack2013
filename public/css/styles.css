@@ -2,10 +2,9 @@
     GAME UI
 \*----------------------------------------------------------------------------------------------------------------*/
 .ui-container {
-	max-width: 600px;
+	width: 600px;
 	padding: 2em;
 	border-radius: 4px;
-	display: inline-block;
 	
 	background: rgba(0, 0, 0, 0.7);
 	
@@ -72,6 +71,38 @@
 	
 	top: 50%;
 	left: 20px;
+}
+
+.item {
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+	border-radius: 5px;
+	display: block;
+	
+	background: rgba(0, 0, 0, 0.7);
+	
+	position: absolute;
+}
+
+.item1 {
+	top: 120px;
+	left: 140px;
+}
+
+.item2 {
+	top: 140px;
+	right: 100px;
+}
+
+.item3 {
+	bottom: 160px;
+	left: 120px;
+}
+
+.item4 {
+	bottom: 120px;
+	right: 140px;
 }
 
 
