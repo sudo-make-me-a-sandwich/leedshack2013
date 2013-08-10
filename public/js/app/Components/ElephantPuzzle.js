@@ -20,5 +20,17 @@ define(['app/View'], function (View)
         this.view.fetch('/templates/Components/ElephantPuzzle', 'puzzle').done(cb);
     }
 
+    /**
+     * Can only be called post render
+     */
+    ElephantPuzzle.prototype.onClick = function(cb)
+    {
+       $('.elephantPuzzle .puzzleTitle').click(cb);
+    }
+
+    ElephantPuzzle.prototype.remove = function() {
+    	$('.elephantPuzzle .puzzleContent').remove();
+    }
+    
     return ElephantPuzzle;
 });

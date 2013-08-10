@@ -1,3 +1,9 @@
 <script id="puzzle" type="text/html">
-	Elephant puzzle!
+	<div class="elephantPuzzle">
+		<div class="puzzleTitle">Elephant puzzle!</div>
+		
+		<div class="puzzleContent center-align" style="display: none">
+			The puzzle content
+		</div>
+	</div>
 </script>
