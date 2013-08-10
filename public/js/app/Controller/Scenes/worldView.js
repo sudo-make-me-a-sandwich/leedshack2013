@@ -13,16 +13,24 @@ define([
 	 */
 	function start(view, cb)
 	{
-        var key = new Key();
-        key.init('leedsArena');
-        key.render(function(html) {
-            view.components.push(html);
-            cb();
-        });
+        this.key = new Key();
+        this.key.init('leedsArena');
+        
+        if (!KeyChain.hasKey(this.key.key)) {
+            this.key.render(function(html) {
+                view.components.push(html);
+                cb();
+            });
+        }
 	}
 	
     function postRender()
     {
+        this.key.onPickup(function() {
+            this.key.remove();
+            KeyChain.addKey(this.key.key);
+            alert('You have just picked up a shiny gold key');
+        }.bind(this));
     }
 
 	return {
