@@ -44,19 +44,19 @@
 		    		</div>
 		    	</a>
 		    {{/west}}
+		    
+		    {{#uicomponents}}{{{.}}}{{/uicomponents}}
 		</div>
-
-	    {{#uicomponents}}{{{.}}}{{/uicomponents}}
+		
+		{{#scene.exhibits}}
+	        <div class="item" style="top: {{top}}px; left: {{left}}px; height: {{height}}px; width: {{width}}px;">
+	            <img src="/images/scenes/{{scene.name}}/{{name}}.jpg">
+	            <div class="tooltip">
+	                {{description}}
+	            </div>
+	        </div>
+	    {{/scene.exhibits}}
+		    
+	    {{#components}}{{{.}}}{{/components}}
 	</div>
-    
-    {{#scene.exhibits}}
-        <div class="item" style="top: {{top}}px; left: {{left}}px; height: {{height}}px; width: {{width}}px;">
-            <img src="/images/scenes/{{scene.name}}/{{name}}.jpg">
-            <div class="tooltip">
-                {{description}}
-            </div>
-        </div>
-    {{/scene.exhibits}}
-	    
-    {{#components}}{{{.}}}{{/components}}
 </script>
