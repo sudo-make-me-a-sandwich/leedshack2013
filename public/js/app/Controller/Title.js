@@ -15,6 +15,7 @@ define(['app/Controller/Base', 'app/View'], function(BaseController, View)
 	}
 	
 	return {
+		init: BaseController.init,
 		start: start
 	}
 });
