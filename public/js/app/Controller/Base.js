@@ -10,9 +10,8 @@ define(function()
 	 */
 	function init()
 	{
-		//set body height to be full height of browser
 		$("body").css("height", $(document).height() + "px");
-
+		
 		return this;
 	}
 	
