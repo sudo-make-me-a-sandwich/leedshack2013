@@ -14,18 +14,19 @@
 \*----------------------------------------------------------------------------------------------------------------*/
 .title {
 	background: url("../images/title/background.jpg") no-repeat;
+	background-position: center;
 	background-size: cover;
-	
-	text-align: center;
 }
 
 .title .welcome {
+	max-width: 600px;
 	padding: 2em;
 	display: inline-block;
 	
 	background: rgba(0, 0, 0, 0.7);
 	
 	color: #fff;
+	text-align: center;
 }
 
 .title .welcome .description {
