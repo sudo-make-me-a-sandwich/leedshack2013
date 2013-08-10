@@ -49,8 +49,10 @@ define([
         });
 
         this.view.scene = sceneData;
-		require(['app/Controller/Scenes/' + sceneData.name], function(scene) {
-			if (scene.start) {
+		require(['app/Controller/Scenes/' + sceneData.name], function(scene)
+		{
+			if (scene && scene.start)
+			{
                 scene.start(_this.view, function() {
                     _this.view.render($('#controller'), '/templates/Game', 'game', {method: 'html'}).done(function() {
                         postRender();
