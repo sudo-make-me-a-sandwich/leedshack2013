@@ -1,5 +1,5 @@
 <script id="title" type="text/html">
-	<div class="welcome">
+	<div class="welcome center-align">
 		<h1 class="white">Welcome to the Leeds City Museum</h1>
 		
 		<div class="description">
