@@ -36,9 +36,9 @@
     {{/west}}
     
     <div class="ui-container center-align">
-    	<h1>{{scene.description}}</h1>
+    	<h1>{{scene.title}}</h1>
     	
-    	Text about the scene and kittens!!!
+    	{{scene.description}}
     </div>
     {{#components}}{{.}}{{/components}}
 </script>
