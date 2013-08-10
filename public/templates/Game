@@ -1,6 +1,4 @@
 <script id="game" type="text/html">
-	Scene: {{scene.description}}
-
     {{#north}}
     	<a class="ui-button-north" href="#game:{{north.name}}">
     		<img src="/images/ui/north.png" alt="" />
@@ -36,4 +34,10 @@
     		</div>
     	</a>
     {{/west}}
+    
+    <div class="ui-container center-align">
+    	<h1>{{scene.description}}</h1>
+    	
+    	Text about the scene and kittens!!!
+    </div>
 </script>
