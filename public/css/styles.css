@@ -107,3 +107,17 @@
 	background-position: center;
 	background-size: cover;
 }
+
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*\
+    COLLECTORS CABINET
+\*----------------------------------------------------------------------------------------------------------------*/
+.collectorsCabinet {
+	background: url("../images/scenes/collectorsCabinet/background.jpg") no-repeat;
+	background-position: center;
+	background-size: cover;
+}
