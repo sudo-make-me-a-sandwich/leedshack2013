@@ -1,7 +1,7 @@
 /**
  * Choose sport controller. :-)
  */
-define(['app/Controller/Base', 'app/View'], function(BaseController, View)
+define(['app/Controller/Base', 'app/View', 'app/Model/SceneData'], function(BaseController, View, SceneData)
 {
 	/**
 	 * Start this controller
@@ -19,7 +19,7 @@ define(['app/Controller/Base', 'app/View'], function(BaseController, View)
             var sceneName = 'frontDoor';
         }
 		
-        View.scene = sceneName;
+        View.scene = SceneData.getScene(sceneName);
 		View.render($('#controller'), '/templates/Game', 'game', {method: 'html'});
 	}
 	
