@@ -12,14 +12,14 @@
 /*----------------------------------------------------------------------------------------------------------------*\
     WELCOME SCREEN
 \*----------------------------------------------------------------------------------------------------------------*/
-body {
+.title {
 	background: url("../images/title/background.jpg") no-repeat;
 	background-size: cover;
 	
 	text-align: center;
 }
 
-.welcome {
+.title .welcome {
 	padding: 2em;
 	display: inline-block;
 	
@@ -28,7 +28,7 @@ body {
 	color: #fff;
 }
 
-.welcome .description {
+.title .welcome .description {
 	margin-bottom: 20px;
 }
 
