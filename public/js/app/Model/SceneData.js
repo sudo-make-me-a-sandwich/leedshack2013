@@ -27,7 +27,6 @@ define(function()
         },
         'leedsArena' : {
             'south': 'entrance',
-            'up': 'landing1',
             'key': 'leedsArena',
             'name': 'leedsArena',
             'title': 'The Leeds Arena',
@@ -64,6 +63,7 @@ define(function()
             'description': ''
         },
         'lifeOnEarthWest' : {
+            'up': 'entrance',
             'north': 'lifeOnEarthNorth',
             'south': 'lifeOnEarthSouth',
             'east': 'lifeOnEarthEast',
@@ -72,6 +72,7 @@ define(function()
             'description': ''
         },
         'lifeOnEarthNorth' : {
+            'up': 'entrance',
             'south': 'lifeOnEarthSouth',
             'west': 'lifeOnEarthWest',
             'east': 'lifeOnEarthEast',
@@ -80,6 +81,7 @@ define(function()
             'description': ''
         },
         'lifeOnEarthEast' : {
+            'up': 'entrance',
             'north': 'lifeOnEarthNorth',
             'south': 'lifeOnEarthSouth',
             'west': 'lifeOnEarthWest',
