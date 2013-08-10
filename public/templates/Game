@@ -36,6 +36,9 @@
 	    	</a>
 	    {{/west}}
 	    
+	    <div class="ui-puzzle">
+	    </div>
+	    
 	    <div class="ui-container bottom-align">
 	    	<h1>{{scene.title}}</h1>
 	    	{{scene.description}}
