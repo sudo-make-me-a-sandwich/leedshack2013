@@ -1,0 +1,11 @@
+<script id="puzzle" type="text/html">
+	<div class="elephantPuzzle">
+		<div class="puzzleTitle">Elephant puzzle!</div>
+		
+		<div class="puzzleContent center-align" style="display: none">
+			<img src="/images/scenes/worldView/elephant.jpg" alt="Elephant" />
+			
+			<div>A huge elephant emerges from the box. He's missing one tusk and doesn't look particularly happy.</div>
+		</div>
+	</div>
+</script>

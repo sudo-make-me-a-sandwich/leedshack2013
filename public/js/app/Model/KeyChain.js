@@ -4,9 +4,9 @@
  * Access and Set local storage data
  */
 
-define(function()
+define(['app/Model/Storage'], function(Storage)
 {
-    var keys = {};
+    var keys = Storage.getData('KeyChainData') || {};
 
     function isLocked(scene) {
         if (!scene.key) {
@@ -22,6 +22,7 @@ define(function()
 
     function addKey(key) {
         keys[key] = true;
+        Storage.setData('KeyChainData', keys);
     }
 
 	return {

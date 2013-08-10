@@ -5,8 +5,10 @@ define([
     'app/Controller/Base',
     'app/View',
     'app/Model/SceneData',
-    'app/Model/KeyChain'
-], function(BaseController, View, SceneData, KeyChain)
+    'app/Model/KeyChain',
+    'app/Model/Storage'
+
+], function(BaseController, View, SceneData, KeyChain, Storage)
 {
 	/**
 	 * Start this controller
@@ -15,6 +17,7 @@ define([
 	 */
 	function start()
 	{
+        this.previousScene = Storage.getData('previousScene');
 		this.view = new View();
 		var params = window.location.hash.match('game:([a-zA-Z]+)');
 		
@@ -30,7 +33,12 @@ define([
 	    var sceneData = SceneData.getScene(sceneName);
 	    
         if (KeyChain.isLocked(sceneData)) {
-            throw new Error('You shouldn\'t be in here this room is locked!');
+            sceneData = {
+                name: 'locked',
+                title: sceneData.title,
+                description: 'This room is locked! You need to find the key to enter!',
+                south: this.previousScene.name 
+            };
         }
 
         document.body.className = sceneData.name;
@@ -38,10 +46,13 @@ define([
         var _this = this;
         $.each(['north', 'south', 'east', 'west', 'up', 'down'], function()
         {
-            if (sceneData[this]) {
+            if (sceneData[this])
+            {
                 var adjScene = SceneData.getScene(sceneData[this]);
-                console.log('Found scene [' + adjScene.description + '] to the ' + this);
-                _this.view[this] = {
+                console.log('Found scene [' + adjScene.title + '] to the ' + this);
+                
+                _this.view[this] =
+                {
                     locked: KeyChain.isLocked(adjScene),
                     scene: adjScene
                 };
@@ -53,9 +64,12 @@ define([
 		{
 			if (scene && scene.start)
 			{
-                scene.start(_this.view, function() {
-                    _this.view.render($('#controller'), '/templates/Game', 'game', {method: 'html'}).done(function() {
+                scene.start(_this.view, function()
+                {
+                    _this.view.render($('#controller'), '/templates/Game', 'game', {method: 'html'}).done(function()
+                    {
                         postRender();
+                        
                         if (scene.postRender) {
                             scene.postRender();
                         }
@@ -66,6 +80,7 @@ define([
                 _this.view.render($('#controller'), '/templates/Game', 'game', {method: 'html'}).done(postRender);
             }
 		});
+        Storage.setData('previousScene', sceneData);
 	}
 	
 	/**
@@ -84,6 +99,18 @@ define([
 				"position": "absolute",
 				"left": "50%",
 				"top": "50%"
+			});
+        });
+		
+		// Bottom align
+		$(".bottom-align").each(function()
+        {
+			$(this).css({
+				"margin-left": "-" + $(this).outerWidth() / 2 + "px",
+				"margin-top": "-" + $(this).outerHeight() / 2 + "px",
+				"position": "absolute",
+				"left": "50%",
+				"bottom": "150px"
 			});
         });
 		

@@ -148,7 +148,7 @@
 
 
 /*----------------------------------------------------------------------------------------------------------------*\
-    ENTERANCE
+    ENTRANCE
 \*----------------------------------------------------------------------------------------------------------------*/
 .entrance .gameContainer {
 	background: url("../images/scenes/entrance/background.jpg") no-repeat;
@@ -190,4 +190,20 @@
 	background: url("../images/scenes/collectorsCabinet/background.jpg") no-repeat;
 	background-position: center;
 	background-size: cover;
+}
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*\
+    PUZZLES
+\*----------------------------------------------------------------------------------------------------------------*/
+.puzzleContent {
+	width: 600px;
+	height: 400px;
+}
+
+.puzzleContent img {
+	width: auto;
 }
