@@ -7,6 +7,7 @@ define([
 ], function (View, KeyChain)
 {
     function Key() {
+        this.keyChain = KeyChain;
     }
 
     var descriptions = {
@@ -21,16 +22,27 @@ define([
 	Key.prototype.init = function()
 	{
         this.view = new View();
-        this.view.keys = new Array();
+	}
+
+    Key.prototype.addKey = function(key) {
+        KeyChain.addKey(key);
+        this.redraw();
+    }
+
+    Key.prototype.render = function(cb) {
         var keys = KeyChain.getKeys();
-        console.log(keys);
+        this.view.keys = new Array();
         for (i in keys) {
             this.view.keys.push({key: i, description: descriptions[i]});
         }
-	}
 
-    Key.prototype.render = function(cb) {
         this.view.fetch('/templates/Components/keyChain', 'keyChain').done(cb);
+    }
+
+    Key.prototype.redraw = function() {
+        this.render(function(html) {
+            $('.keychain').empty().html(html);
+        });
     }
 
     return Key;
