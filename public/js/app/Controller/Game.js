@@ -22,9 +22,10 @@ define(['app/Controller/Base', 'app/View', 'app/Model/SceneData'], function(Base
 
         document.body.className = sceneName;
 
-        $.each(['north', 'south', 'east', 'west'], function(direction) {
-            if (sceneData[direction]) {
-                View[direction] = sceneData.getScene(sceneData[direction]);
+        $.each(['north', 'south', 'east', 'west'], function() {
+            if (sceneData[this]) {
+                console.log('Found: ' + this);
+                View[this] = SceneData.getScene(sceneData[this]);
             }
         });
 
