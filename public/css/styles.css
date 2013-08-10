@@ -155,6 +155,16 @@
 	right: -65px;
 }
 
+.ui-button-up .tooltip {
+	bottom: -26px;
+	right: -65px;
+}
+
+.ui-button-down .tooltip {
+	bottom: -26px;
+	right: -10px;
+}
+
 .ui-button-north {
 	bottom: 95px;
 	right: 55px;
@@ -173,6 +183,16 @@
 .ui-button-west {
 	bottom: 65px;
 	right: 85px;
+}
+
+.ui-button-up {
+	bottom: 35px;
+	right: 85px;
+}
+
+.ui-button-down {
+	bottom: 35px;
+	right: 25px;
 }
 
 .ui-puzzle {

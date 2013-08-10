@@ -9,6 +9,24 @@
 				</div>
 			</div>
 			
+			{{#up}}
+		    	<a class="ui-button-up{{#up.locked}} locked{{/up.locked}}" href="#game:{{up.scene.name}}">
+		    		<img src="/images/ui/up.png" alt="" />
+		    		<div class="tooltip">
+		    			{{up.scene.title}}
+		    		</div>
+		    	</a>
+		    {{/up}}
+		    
+		    {{#down}}
+		    	<a class="ui-button-down{{#down.locked}} locked{{/down.locked}}" href="#game:{{down.scene.name}}">
+		    		<img src="/images/ui/down.png" alt="" />
+		    		<div class="tooltip">
+		    			{{down.scene.title}}
+		    		</div>
+		    	</a>
+		    {{/down}}
+			
 			{{#north}}
 		    	<a class="ui-button-north{{#north.locked}} locked{{/north.locked}}" href="#game:{{north.scene.name}}">
 		    		<img src="/images/ui/north.png" alt="" />
