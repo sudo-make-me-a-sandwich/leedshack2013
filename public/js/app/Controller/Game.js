@@ -93,6 +93,18 @@ define([
 			});
         });
 		
+		// Bottom align
+		$(".bottom-align").each(function()
+        {
+			$(this).css({
+				"margin-left": "-" + $(this).outerWidth() / 2 + "px",
+				"margin-top": "-" + $(this).outerHeight() / 2 + "px",
+				"position": "absolute",
+				"left": "50%",
+				"bottom": "150px"
+			});
+        });
+		
 		//align tooltips
 		$(".ui-button-north .tooltip").each(function()
         {

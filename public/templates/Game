@@ -35,9 +35,8 @@
     	</a>
     {{/west}}
     
-    <div class="ui-container center-align">
+    <div class="ui-container bottom-align">
     	<h1>{{scene.title}}</h1>
-    	
     	{{scene.description}}
     </div>
     
