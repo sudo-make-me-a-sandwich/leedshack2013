@@ -167,18 +167,18 @@
 }
 
 .ui-button-east .tooltip {
-	bottom: 20px;
-	right: 20px;
+	bottom: -56px;
+	right: -10px;
 }
 
 .ui-button-south .tooltip {
-	bottom: 20px;
-	right: 20px;
+	bottom: -26px;
+	right: -39px;
 }
 
 .ui-button-west .tooltip {
-	bottom: 20px;
-	right: 20px;
+	bottom: -56px;
+	right: -65px;
 }
 
 .ui-button-north {
