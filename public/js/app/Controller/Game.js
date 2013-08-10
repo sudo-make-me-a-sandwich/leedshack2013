@@ -38,10 +38,13 @@ define([
         var _this = this;
         $.each(['north', 'south', 'east', 'west', 'up', 'down'], function()
         {
-            if (sceneData[this]) {
+            if (sceneData[this])
+            {
                 var adjScene = SceneData.getScene(sceneData[this]);
-                console.log('Found scene [' + adjScene.description + '] to the ' + this);
-                _this.view[this] = {
+                console.log('Found scene [' + adjScene.title + '] to the ' + this);
+                
+                _this.view[this] =
+                {
                     locked: KeyChain.isLocked(adjScene),
                     scene: adjScene
                 };
@@ -53,9 +56,12 @@ define([
 		{
 			if (scene && scene.start)
 			{
-                scene.start(_this.view, function() {
-                    _this.view.render($('#controller'), '/templates/Game', 'game', {method: 'html'}).done(function() {
+                scene.start(_this.view, function()
+                {
+                    _this.view.render($('#controller'), '/templates/Game', 'game', {method: 'html'}).done(function()
+                    {
                         postRender();
+                        
                         if (scene.postRender) {
                             scene.postRender();
                         }
