@@ -1,18 +1,39 @@
 <script id="game" type="text/html">
-	<h1>Game UI goes here</h1>
-	
 	Scene: {{scene.description}}
 
     {{#north}}
-        <p>To the north there is <a href="#game:{{north.name}}">{{north.description}}</a></p>
+    	<a class="ui-button-north" href="#game:{{north.name}}">
+    		<img src="/images/ui/north.png" alt="" />
+    		<div class="tooltip">
+    			{{north.description}}
+    		</div>
+    	</a>
     {{/north}}
+    
     {{#south}}
-        <p>To the south there is <a href="#game:{{south.name}}">{{south.description}}</a></p>
+    	<a class="ui-button-south" href="#game:{{south.name}}">
+    		<img src="/images/ui/south.png" alt="" />
+    		<div class="tooltip">
+    			{{south.description}}
+    		</div>
+    	</a>
     {{/south}}
+    
     {{#east}}
-        <p>To the east there is <a href="#game:{{east.name}}">{{east.description}}</a></p>
+        <a class="ui-button-east" href="#game:{{east.name}}">
+    		<img src="/images/ui/east.png" alt="" />
+    		<div class="tooltip">
+    			{{east.description}}
+    		</div>
+    	</a>
     {{/east}}
+    
     {{#west}}
-        <p>To the west there is <a href="#game:{{west.name}}">{{west.description}}</a></p>
+        <a class="ui-button-west" href="#game:{{west.name}}">
+    		<img src="/images/ui/west.png" alt="" />
+    		<div class="tooltip">
+    			{{west.description}}
+    		</div>
+    	</a>
     {{/west}}
 </script>
