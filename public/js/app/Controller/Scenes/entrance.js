@@ -1,9 +1,7 @@
 /**
  * Entrance scene controller
  */
-define([
-'app/Components/Key'
-], function(Key)
+define(['app/Components/Key'], function(Key)
 {
 	/**
 	 * Start this controller
@@ -15,9 +13,11 @@ define([
         this.key = new Key();
         this.key.init('leedsArena');
         this.keyChain = game.keyChain;
-
-        if (!this.keyChain.keyChain.hasKey(this.key.key)) {
-            this.key.render(function(html) {
+        
+        if (!this.keyChain.keyChain.hasKey(this.key.key))
+        {
+            this.key.render(function(html)
+            {
                 view.components.push(html);
                 cb();
             });
@@ -29,7 +29,8 @@ define([
 	
     function postRender()
     {
-        this.key.onPickup(function() {
+        this.key.onPickup(function()
+        {
             this.key.remove();
             this.keyChain.addKey(this.key.key);
             alert('You have just picked up a shiny gold key');
