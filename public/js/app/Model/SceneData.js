@@ -9,12 +9,14 @@ define(function()
     var data = {
         'frontDoor': {
             'north': 'entrance',
-            'name': 'Front Door',
+            'name': 'frontDoor',
+            'description': 'Front Door',
             'background': '/images/scenes/frontDoor/background.png'
         },
         'entrance' : {
             'south': 'frontDoor',
-            'name': 'Entrance',
+            'name': 'entrance',
+            'description': 'Entrance',
             'background': '/images/scenes/entrace/background.png'
         }
     };

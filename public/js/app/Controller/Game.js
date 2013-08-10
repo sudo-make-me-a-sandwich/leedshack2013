@@ -10,7 +10,7 @@ define(['app/Controller/Base', 'app/View', 'app/Model/SceneData'], function(Base
 	 */
 	function start()
 	{
-		var params = window.location.hash.match('game:([a-zA-Z]+)/');
+		var params = window.location.hash.match('game:([a-zA-Z]+)');
 		
 		if (params && params.length) {
             var sceneName = params[1];
@@ -18,13 +18,14 @@ define(['app/Controller/Base', 'app/View', 'app/Model/SceneData'], function(Base
         else {
             var sceneName = 'frontDoor';
         }
+        console.log('Setting scene to ' + sceneName);
 	    var sceneData = SceneData.getScene(sceneName);
 
-        document.body.className = sceneName;
+        document.body.className = sceneData.name;
 
         $.each(['north', 'south', 'east', 'west'], function() {
             if (sceneData[this]) {
-                console.log('Found: ' + this);
+                console.log('Found scene to the ' + this);
                 View[this] = SceneData.getScene(sceneData[this]);
             }
         });
