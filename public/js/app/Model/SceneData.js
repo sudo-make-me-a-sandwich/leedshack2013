@@ -18,6 +18,7 @@ define(function()
             'north': 'leedsArena',
             'east': 'collectorsCabinet',
             'west': 'worldView',
+            'down': 'lifeOnEarthSouth',
             'name': 'entrance',
             'title': 'Entrance',
             'description': "You're standing in the grand entrance hall of the Leeds City Museum. " +
@@ -53,11 +54,38 @@ define(function()
             'description': "Numerous cambinets containing exhibits from Africa and Asia surround the centre of the room. " +
             	"A loud violent banging noise eminates from a large wooden box in the corner."
         },
-        'landing1' : {
-            'down': 'entrance',
-            'name': 'landing1',
-            'title': 'First Floor Landing',
-            'description': 'First Floor Landing'
+        'lifeOnEarthSouth' : {
+            'up': 'entrance',
+            'north': 'lifeOnEarthNorth',
+            'west': 'lifeOnEarthWest',
+            'east': 'lifeOnEarthEast',
+            'name': 'lifeOnEarthSouth',
+            'title': 'Life On Earth South',
+            'description': ''
+        },
+        'lifeOnEarthWest' : {
+            'north': 'lifeOnEarthNorth',
+            'south': 'lifeOnEarthSouth',
+            'east': 'lifeOnEarthEast',
+            'name': 'lifeOnEarthWest',
+            'title': 'Life On Earth West',
+            'description': ''
+        },
+        'lifeOnEarthNorth' : {
+            'south': 'lifeOnEarthSouth',
+            'west': 'lifeOnEarthWest',
+            'east': 'lifeOnEarthEast',
+            'name': 'lifeOnEarthNorth',
+            'title': 'Life On Earth North',
+            'description': ''
+        },
+        'lifeOnEarthEast' : {
+            'north': 'lifeOnEarthNorth',
+            'south': 'lifeOnEarthSouth',
+            'west': 'lifeOnEarthWest',
+            'name': 'lifeOnEarthEast',
+            'title': 'Life On Earth East',
+            'description': ''
         }
     };
 
