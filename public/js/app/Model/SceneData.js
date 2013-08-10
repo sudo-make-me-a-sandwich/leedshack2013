@@ -10,14 +10,18 @@ define(function()
         'frontDoor': {
             'north': 'entrance',
             'name': 'frontDoor',
-            'description': 'Front Door',
-            'background': '/images/scenes/frontDoor/background.png'
+            'description': 'Outside'
         },
         'entrance' : {
             'south': 'frontDoor',
+            'north': 'mainHall',
             'name': 'entrance',
-            'description': 'Entrance',
-            'background': '/images/scenes/entrace/background.png'
+            'description': 'Entrance'
+        },
+        'mainHall' : {
+            'south': 'enterance',
+            'name': 'mainHall',
+            'description': 'Main Hall'
         }
     };
 
