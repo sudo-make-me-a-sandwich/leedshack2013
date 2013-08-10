@@ -24,6 +24,7 @@ define(function()
             'south': 'entrance',
             'up': 'landing1',
             'name': 'leedsArena',
+            'key': 'leedsArena',
             'description': 'The Leeds Arena'
         },
         'collectorsCabinet' : {
