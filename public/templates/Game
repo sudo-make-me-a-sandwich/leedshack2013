@@ -1,45 +1,50 @@
 <script id="game" type="text/html">
 	<div class="gameContainer center-align">
-	    {{#north}}
-	    	<a class="ui-button-north{{#north.locked}} locked{{/north.locked}}" href="#game:{{north.scene.name}}">
-	    		<img src="/images/ui/north.png" alt="" />
-	    		<div class="tooltip">
-	    			{{north.scene.title}}
-	    		</div>
-	    	</a>
-	    {{/north}}
-	    
-	    {{#south}}
-	    	<a class="ui-button-south{{#south.locked}} locked{{/south.locked}}" href="#game:{{south.scene.name}}">
-	    		<img src="/images/ui/south.png" alt="" />
-	    		<div class="tooltip">
-	    			{{south.scene.title}}
-	    		</div>
-	    	</a>
-	    {{/south}}
-	    
-	    {{#east}}
-	        <a class="ui-button-east{{#east.locked}} locked{{/east.locked}}" href="#game:{{east.scene.name}}">
-	    		<img src="/images/ui/east.png" alt="" />
-	    		<div class="tooltip">
-	    			{{east.scene.title}}
-	    		</div>
-	    	</a>
-	    {{/east}}
-	    
-	    {{#west}}
-	        <a class="ui-button-west{{#west.locked}} locked{{/west.locked}}" href="#game:{{west.scene.name}}">
-	    		<img src="/images/ui/west.png" alt="" />
-	    		<div class="tooltip">
-	    			{{west.scene.title}}
-	    		</div>
-	    	</a>
-	    {{/west}}
-	    
-	    <div class="ui-container bottom-align">
-	    	<h1>{{scene.title}}</h1>
-	    	{{scene.description}}
-	    </div>
+		<div class="ui">
+			<div class="area">
+				{{scene.title}}
+				
+				<div class="description">
+					{{scene.description}}
+				</div>
+			</div>
+			
+			{{#north}}
+		    	<a class="ui-button-north{{#north.locked}} locked{{/north.locked}}" href="#game:{{north.scene.name}}">
+		    		<img src="/images/ui/north.png" alt="" />
+		    		<div class="tooltip">
+		    			{{north.scene.title}}
+		    		</div>
+		    	</a>
+		    {{/north}}
+		    
+		    {{#south}}
+		    	<a class="ui-button-south{{#south.locked}} locked{{/south.locked}}" href="#game:{{south.scene.name}}">
+		    		<img src="/images/ui/south.png" alt="" />
+		    		<div class="tooltip">
+		    			{{south.scene.title}}
+		    		</div>
+		    	</a>
+		    {{/south}}
+		    
+		    {{#east}}
+		        <a class="ui-button-east{{#east.locked}} locked{{/east.locked}}" href="#game:{{east.scene.name}}">
+		    		<img src="/images/ui/east.png" alt="" />
+		    		<div class="tooltip">
+		    			{{east.scene.title}}
+		    		</div>
+		    	</a>
+		    {{/east}}
+		    
+		    {{#west}}
+		        <a class="ui-button-west{{#west.locked}} locked{{/west.locked}}" href="#game:{{west.scene.name}}">
+		    		<img src="/images/ui/west.png" alt="" />
+		    		<div class="tooltip">
+		    			{{west.scene.title}}
+		    		</div>
+		    	</a>
+		    {{/west}}
+		</div>
 	    
 	    <div class="item item1">
 	    </div>

@@ -1,6 +1,6 @@
 <script id="keyChain" type="text/html">
     <div class="keychain">
-    	<img src="/images/keychain.png" alt="" />
+    	<img src="/images/ui/keychain.png" alt="" />
     	
     	<ul>
 	        {{#keys}} 
