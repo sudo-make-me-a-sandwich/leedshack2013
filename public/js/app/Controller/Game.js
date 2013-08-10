@@ -48,12 +48,12 @@ define([
             }
         });
 
-		require(['app/Controller/Scenes/' + sceneData.name], function(scene) {
-			scene.start(_this.view);
-		});
-        
         this.view.scene = sceneData;
-		this.view.render($('#controller'), '/templates/Game', 'game', {method: 'html'}).done(postRender);
+		require(['app/Controller/Scenes/' + sceneData.name], function(scene) {
+			scene.start(_this.view, function() {
+                _this.view.render($('#controller'), '/templates/Game', 'game', {method: 'html'}).done(postRender);
+            });
+		});
 	}
 	
 	/**
