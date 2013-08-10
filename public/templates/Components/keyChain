@@ -1,7 +1,11 @@
 <script id="keyChain" type="text/html">
-    <div class="keyChain">
-        {{#keys}} 
-            <div class="key">{{description}}</div>
-        {{/keys}} 
+    <div class="keychain">
+    	<img src="/images/keychain.png" alt="" />
+    	
+    	<ul>
+	        {{#keys}} 
+	            <li>{{description}}
+	        {{/keys}} 
+        </ul>
     </div>
 </script>
