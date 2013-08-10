@@ -25,7 +25,7 @@ define(['app/Controller/Base', 'app/View', 'app/Model/SceneData'], function(Base
         document.body.className = sceneData.name;
         
         var _this = this;
-        $.each(['north', 'south', 'east', 'west'], function()
+        $.each(['north', 'south', 'east', 'west', 'up', 'down'], function()
         {
             if (sceneData[this]) {
                 console.log('Found scene to the ' + this);

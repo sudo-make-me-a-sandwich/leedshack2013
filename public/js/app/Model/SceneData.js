@@ -14,14 +14,32 @@ define(function()
         },
         'entrance' : {
             'south': 'frontDoor',
-            'north': 'mainHall',
+            'north': 'leedsArena',
+            'east': 'collectorsCabinet',
+            'west': 'worldView',
             'name': 'entrance',
             'description': 'Entrance'
         },
-        'mainHall' : {
+        'leedsArena' : {
             'south': 'entrance',
-            'name': 'mainHall',
-            'description': 'Main Hall'
+            'up': 'landing1',
+            'name': 'leedsArena',
+            'description': 'The Leeds Arena'
+        },
+        'collectorsCabinet' : {
+            'west': 'entrance',
+            'name': 'collectorsCabinet',
+            'description': 'The Collectors Cabinet'
+        },
+        'worldView' : {
+            'east': 'entrance',
+            'name': 'worldView',
+            'description': 'world view'
+        },
+        'landing1' : {
+            'down': 'entrance',
+            'name': 'landing1',
+            'description': 'First Floor Landing'
         }
     };
 
