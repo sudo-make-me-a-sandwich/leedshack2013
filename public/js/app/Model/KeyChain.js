@@ -25,9 +25,14 @@ define(['app/Model/Storage'], function(Storage)
         Storage.setData('KeyChainData', keys);
     }
 
+    function getKeys() {
+        return keys;
+    }
+
 	return {
 		isLocked: isLocked,
 		hasKey: hasKey,
+		getKeys: getKeys,
         addKey: addKey
 	}
 });

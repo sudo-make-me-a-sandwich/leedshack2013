@@ -6,9 +6,10 @@ define([
     'app/View',
     'app/Model/SceneData',
     'app/Model/KeyChain',
-    'app/Model/Storage'
+    'app/Model/Storage',
+    'app/Components/KeyChain'
 
-], function(BaseController, View, SceneData, KeyChain, Storage)
+], function(BaseController, View, SceneData, KeyChain, Storage, KeyChainComponent)
 {
 	/**
 	 * Start this controller
@@ -58,7 +59,9 @@ define([
                 };
             }
         });
-
+        
+        addSubComponents(this.view);
+        
         this.view.scene = sceneData;
 		require(['app/Controller/Scenes/' + sceneData.name], function(scene)
 		{
@@ -83,6 +86,14 @@ define([
         Storage.setData('previousScene', sceneData);
 	}
 	
+    function addSubComponents(view) {
+        this.keyChain = new KeyChainComponent();
+        this.keyChain.init();
+        this.keyChain.render(function(html){
+            view.components.push(html);
+        });
+    }
+
 	/**
 	 * Perform actions after the scene is rendered
 	 * 
