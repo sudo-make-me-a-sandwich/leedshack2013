@@ -18,8 +18,11 @@ define(['app/Controller/Base', 'app/View', 'app/Model/SceneData'], function(Base
         else {
             var sceneName = 'frontDoor';
         }
-		
-        View.scene = SceneData.getScene(sceneName);
+	    var sceneData = SceneData.getScene(sceneName);
+
+        document.body.className = sceneName;
+
+        View.scene = sceneData;
 		View.render($('#controller'), '/templates/Game', 'game', {method: 'html'});
 	}
 	
