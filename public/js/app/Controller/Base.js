@@ -1,0 +1,7 @@
+/**
+ * Base controller
+ */
+define(function()
+{
+	
+});
