@@ -24,8 +24,11 @@ define([
         else {
             var sceneName = 'frontDoor';
         }
+		
         console.log('Setting scene to ' + sceneName);
+        
 	    var sceneData = SceneData.getScene(sceneName);
+	    
         if (KeyChain.isLocked(sceneData)) {
             throw new Error('You shouldn\'t be in here this room is locked!');
         }
@@ -45,6 +48,10 @@ define([
             }
         });
 
+		require(['app/Controller/Scenes/' + sceneData.name], function(scene) {
+			scene.start();
+		});
+        
         this.view.scene = sceneData;
 		this.view.render($('#controller'), '/templates/Game', 'game', {method: 'html'}).done(postRender);
 	}
