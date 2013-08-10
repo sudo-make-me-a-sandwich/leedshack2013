@@ -1,36 +1,36 @@
 <script id="game" type="text/html">
     {{#north}}
-    	<a class="ui-button-north" href="#game:{{north.name}}">
+    	<a class="ui-button-north{{#north.locked}} locked{{/north.locked}}" href="#game:{{north.scene.name}}">
     		<img src="/images/ui/north.png" alt="" />
     		<div class="tooltip">
-    			{{north.description}}
+    			{{north.scene.description}}
     		</div>
     	</a>
     {{/north}}
     
     {{#south}}
-    	<a class="ui-button-south" href="#game:{{south.name}}">
+    	<a class="ui-button-south{{#south.locked}} locked{{/south.locked}}" href="#game:{{south.scene.name}}">
     		<img src="/images/ui/south.png" alt="" />
     		<div class="tooltip">
-    			{{south.description}}
+    			{{south.scene.description}}
     		</div>
     	</a>
     {{/south}}
     
     {{#east}}
-        <a class="ui-button-east" href="#game:{{east.name}}">
+        <a class="ui-button-east{{#east.locked}} locked{{/east.locked}}" href="#game:{{east.scene.name}}">
     		<img src="/images/ui/east.png" alt="" />
     		<div class="tooltip">
-    			{{east.description}}
+    			{{east.scene.description}}
     		</div>
     	</a>
     {{/east}}
     
     {{#west}}
-        <a class="ui-button-west" href="#game:{{west.name}}">
+        <a class="ui-button-west{{#west.locked}} locked{{/west.locked}}" href="#game:{{west.scene.name}}">
     		<img src="/images/ui/west.png" alt="" />
     		<div class="tooltip">
-    			{{west.description}}
+    			{{west.scene.description}}
     		</div>
     	</a>
     {{/west}}

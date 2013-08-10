@@ -1,7 +1,12 @@
 /**
  * Main game controller. :-)
  */
-define(['app/Controller/Base', 'app/View', 'app/Model/SceneData'], function(BaseController, View, SceneData)
+define([
+    'app/Controller/Base',
+    'app/View',
+    'app/Model/SceneData',
+    'app/Model/KeyChain'
+], function(BaseController, View, SceneData, KeyChain)
 {
 	/**
 	 * Start this controller
@@ -21,6 +26,9 @@ define(['app/Controller/Base', 'app/View', 'app/Model/SceneData'], function(Base
         }
         console.log('Setting scene to ' + sceneName);
 	    var sceneData = SceneData.getScene(sceneName);
+        if (KeyChain.isLocked(sceneData)) {
+            throw new Error('You shouldn\'t be in here this room is locked!');
+        }
 
         document.body.className = sceneData.name;
         
@@ -28,8 +36,12 @@ define(['app/Controller/Base', 'app/View', 'app/Model/SceneData'], function(Base
         $.each(['north', 'south', 'east', 'west', 'up', 'down'], function()
         {
             if (sceneData[this]) {
-                console.log('Found scene to the ' + this);
-                _this.view[this] = SceneData.getScene(sceneData[this]);
+                var adjScene = SceneData.getScene(sceneData[this]);
+                console.log('Found scene [' + adjScene.description + '] to the ' + this);
+                _this.view[this] = {
+                    locked: KeyChain.isLocked(adjScene),
+                    scene: adjScene
+                };
             }
         });
 
