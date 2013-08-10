@@ -156,8 +156,8 @@
 }
 
 .ui-button-up .tooltip {
-	bottom: -26px;
-	right: -65px;
+	bottom: -86px;
+	right: -10px;
 }
 
 .ui-button-down .tooltip {
@@ -186,8 +186,8 @@
 }
 
 .ui-button-up {
-	bottom: 35px;
-	right: 85px;
+	bottom: 95px;
+	right: 25px;
 }
 
 .ui-button-down {
