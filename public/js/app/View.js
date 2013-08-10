@@ -4,48 +4,48 @@
 
 define(['mustache', 'jquery.mustache'], function(Mustache)
 {
-	window.Mustache = Mustache;
-	
-	/**
-	 * Returns the rendered content of a template
-	 * 
-	 * @return Deferred
-	 */
-	function fetch(templatePath, templateId)
+	function View()
 	{
-		var deferred = $.Deferred();
-		var _this	 = this;
+		window.Mustache = Mustache;
 		
-		$.Mustache.load(templatePath).done(function() {
-			deferred.resolve($.Mustache.render(templateId, _this));
-		});
+		/**
+		 * Returns the rendered content of a template
+		 * 
+		 * @return Deferred
+		 */
+		this.fetch = function(templatePath, templateId)
+		{
+			var deferred = $.Deferred();
+			var _this	 = this;
+			
+			$.Mustache.load(templatePath).done(function() {
+				deferred.resolve($.Mustache.render(templateId, _this));
+			});
+			
+			return deferred;
+		}
 		
-		return deferred;
+		/**
+		 * Render a template
+		 * 
+		 * @param object renderIntoElement
+		 * @param string templatePath
+		 * @param string templateId
+		 * @param object options
+		 * @return void
+		 */
+		this.render = function(renderIntoElement, templatePath, templateId, options)
+		{
+			var deferred = $.Deferred();
+			var _this	 = this;
+			
+			$.Mustache.load(templatePath).done(function() {
+				deferred.resolve(renderIntoElement.mustache(templateId, _this, options));
+			});
+			
+			return deferred;
+		}
 	}
 	
-	/**
-	 * Render a template
-	 * 
-	 * @param object renderIntoElement
-	 * @param string templatePath
-	 * @param string templateId
-	 * @param object options
-	 * @return void
-	 */
-	function render(renderIntoElement, templatePath, templateId, options)
-	{
-		var deferred = $.Deferred();
-		var _this	 = this;
-		
-		$.Mustache.load(templatePath).done(function() {
-			deferred.resolve(renderIntoElement.mustache(templateId, _this, options));
-		});
-		
-		return deferred;
-	}
-	
-	return {
-		fetch: fetch,
-		render: render
-	}
+	return View;
 });
