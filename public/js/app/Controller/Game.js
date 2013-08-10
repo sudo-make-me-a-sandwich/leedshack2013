@@ -5,8 +5,10 @@ define([
     'app/Controller/Base',
     'app/View',
     'app/Model/SceneData',
-    'app/Model/KeyChain'
-], function(BaseController, View, SceneData, KeyChain)
+    'app/Model/KeyChain',
+    'app/Model/Storage'
+
+], function(BaseController, View, SceneData, KeyChain, Storage)
 {
 	/**
 	 * Start this controller
@@ -15,6 +17,7 @@ define([
 	 */
 	function start()
 	{
+        this.previousScene = Storage.getData('previousScene');
 		this.view = new View();
 		var params = window.location.hash.match('game:([a-zA-Z]+)');
 		
@@ -30,7 +33,12 @@ define([
 	    var sceneData = SceneData.getScene(sceneName);
 	    
         if (KeyChain.isLocked(sceneData)) {
-            throw new Error('You shouldn\'t be in here this room is locked!');
+            sceneData = {
+                name: 'locked',
+                title: sceneData.title,
+                description: 'This room is locked! You need to find the key to enter!',
+                south: this.previousScene.name 
+            };
         }
 
         document.body.className = sceneData.name;
@@ -72,6 +80,7 @@ define([
                 _this.view.render($('#controller'), '/templates/Game', 'game', {method: 'html'}).done(postRender);
             }
 		});
+        Storage.setData('previousScene', sceneData);
 	}
 	
 	/**
