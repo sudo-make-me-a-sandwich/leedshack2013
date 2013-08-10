@@ -105,12 +105,12 @@
 
 .item3 {
 	bottom: 160px;
-	left: 120px;
+	left: 80px;
 }
 
 .item4 {
 	bottom: 120px;
-	right: 140px;
+	right: 50px;
 }
 
 
@@ -162,7 +162,7 @@
 	cursor: pointer;
 	
 	position: absolute;
-	top: 89.5%;
+	top: 84.5%;
 	left: 78%;
 }
 
