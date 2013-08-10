@@ -105,7 +105,7 @@ define(['app/Model/Storage'], function(Storage)
 			 * Start the given controller
 			 */
 			require(['app/Controller/' + controllerName], function(controller) {
-				controller.start(controllerOptions);
+				controller.init().start(controllerOptions);
 			});
 		}
 	}

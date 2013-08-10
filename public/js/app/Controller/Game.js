@@ -35,6 +35,7 @@ define(['app/Controller/Base', 'app/View', 'app/Model/SceneData'], function(Base
 	}
 	
 	return {
+		init: BaseController.init,
 		start: start
 	}
 });
