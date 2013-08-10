@@ -1,6 +1,6 @@
 <script id="inventory" type="text/html">
     <div class="inventory">
-    	<img src="/images/inventory.png" alt="" />
+    	<img src="/images/ui/inventory.png" alt="" />
     	
     	<ul>
 	        {{#inventory}} 
