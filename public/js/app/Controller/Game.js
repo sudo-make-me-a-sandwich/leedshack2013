@@ -50,9 +50,19 @@ define([
 
         this.view.scene = sceneData;
 		require(['app/Controller/Scenes/' + sceneData.name], function(scene) {
-			scene.start(_this.view, function() {
+			if (scene.start) {
+                scene.start(_this.view, function() {
+                    _this.view.render($('#controller'), '/templates/Game', 'game', {method: 'html'}).done(function() {
+                        postRender();
+                        if (scene.postRender) {
+                            scene.postRender();
+                        }
+                    });
+                });
+            }
+            else {
                 _this.view.render($('#controller'), '/templates/Game', 'game', {method: 'html'}).done(postRender);
-            });
+            }
 		});
 	}
 	

@@ -1,16 +1,49 @@
 /*----------------------------------------------------------------------------------------------------------------*\
     GAME UI
 \*----------------------------------------------------------------------------------------------------------------*/
+.ui-container {
+	max-width: 600px;
+	padding: 2em;
+	border-radius: 4px;
+	display: inline-block;
+	
+	background: rgba(0, 0, 0, 0.7);
+	
+	text-align: center;
+}
+
 [class*="ui-button-"] {
 	width: 80px;
 	height: 80px;
 	display: block;
 	
+	text-align: center;
+	line-height: 0;
+	
 	position: absolute;
 }
 
 [class*="ui-button-"] .tooltip {
-	display: none;
+	padding: 8px;
+	border-radius: 4px;
+	display: inline-block;
+	
+	background: rgba(0, 0, 0, 0.7);
+	
+	white-space: nowrap;
+	line-height: 1em;
+	
+	opacity: 0;
+	
+	-webkit-transition: all 0.2s ease-in;  
+    -moz-transition: all 0.2s ease-in;  
+    -ms-transition: all 0.2s ease-in;  
+    -o-transition: all 0.2s ease-in;  
+    transition: all 0.2s ease-in; 
+}
+
+[class*="ui-button-"]:hover .tooltip {
+	opacity: 1;
 }
 
 .ui-button-north {
@@ -39,17 +72,6 @@
 	
 	top: 50%;
 	left: 20px;
-}
-
-.ui-container {
-	max-width: 600px;
-	padding: 2em;
-	border-radius: 4px;
-	display: inline-block;
-	
-	background: rgba(0, 0, 0, 0.7);
-	
-	text-align: center;
 }
 
 
