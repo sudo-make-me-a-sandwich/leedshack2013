@@ -21,7 +21,12 @@ define([
         });
 	}
 	
+    function postRender()
+    {
+    }
+
 	return {
-		start: start
+		start: start,
+        postRender: postRender
 	}
 });
