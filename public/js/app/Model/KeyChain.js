@@ -16,12 +16,17 @@ define(function()
         return !keys[scene.key];
     }
 
+    function hasKey(key) {
+        return !!keys[key];
+    }
+
     function addKey(key) {
         keys[key] = true;
     }
 
 	return {
 		isLocked: isLocked,
+		hasKey: hasKey,
         addKey: addKey
 	}
 });
