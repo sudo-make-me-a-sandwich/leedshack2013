@@ -10,6 +10,7 @@ define(['app/Controller/Base', 'app/View', 'app/Model/SceneData'], function(Base
 	 */
 	function start()
 	{
+		this.view = new View();
 		var params = window.location.hash.match('game:([a-zA-Z]+)');
 		
 		if (params && params.length) {
@@ -22,16 +23,18 @@ define(['app/Controller/Base', 'app/View', 'app/Model/SceneData'], function(Base
 	    var sceneData = SceneData.getScene(sceneName);
 
         document.body.className = sceneData.name;
-
-        $.each(['north', 'south', 'east', 'west'], function() {
+        
+        var _this = this;
+        $.each(['north', 'south', 'east', 'west'], function()
+        {
             if (sceneData[this]) {
                 console.log('Found scene to the ' + this);
-                View[this] = SceneData.getScene(sceneData[this]);
+                _this.view[this] = SceneData.getScene(sceneData[this]);
             }
         });
 
-        View.scene = sceneData;
-		View.render($('#controller'), '/templates/Game', 'game', {method: 'html'});
+        this.view.scene = sceneData;
+		this.view.render($('#controller'), '/templates/Game', 'game', {method: 'html'});
 	}
 	
 	return {
