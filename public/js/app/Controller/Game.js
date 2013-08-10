@@ -49,7 +49,7 @@ define([
         });
 
 		require(['app/Controller/Scenes/' + sceneData.name], function(scene) {
-			scene.start(this.view);
+			scene.start(_this.view);
 		});
         
         this.view.scene = sceneData;
