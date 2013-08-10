@@ -7,12 +7,14 @@
 define(function()
 {	
     var data = {
-        'frontDoor' {
+        'frontDoor': {
             'north': 'entrance',
+            'name': 'Front Door',
             'background': '/images/scenes/frontDoor/background.png'
         },
         'entrance' : {
             'south': 'frontDoor',
+            'name': 'Entrance',
             'background': '/images/scenes/entrace/background.png'
         }
     };
@@ -26,6 +28,6 @@ define(function()
 
 
 	return {
-		getScene: getScene;
+		getScene: getScene
 	}
 });

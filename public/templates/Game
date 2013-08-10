@@ -1,5 +1,5 @@
 <script id="game" type="text/html">
 	<h1>Game UI goes here</h1>
 	
-	Scene: {{scene}}
+	Scene: {{scene.name}}
 </script>
