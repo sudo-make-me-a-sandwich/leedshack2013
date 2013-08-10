@@ -37,14 +37,14 @@ define(function()
             'name': 'collectorsCabinet',
             'title': 'The Collectors Cabinet',
             'description': 'The Collectors Cabinet',
-            'slot1': {
+            'exhibits': [{
                 'name': 'thing',
-                'description': 'This is a thing-a-mi-bob'
-            },
-            'slot2': {
-                'name': 'thing2',
-                'description': 'This is another thing-a-mi-bob'
-            }
+                'description': 'This is a thing-a-mi-bob',
+                'top': 100,
+                'left': 10,
+                'height': 30,
+                'width': 30,
+            }]
         },
         'worldView' : {
             'east': 'entrance',
