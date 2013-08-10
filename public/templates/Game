@@ -40,4 +40,5 @@
     	
     	Text about the scene and kittens!!!
     </div>
+    {{#components}}{{.}}{{/components}}
 </script>
