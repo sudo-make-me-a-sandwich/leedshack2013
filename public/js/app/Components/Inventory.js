@@ -5,7 +5,7 @@ define(['app/View', 'app/Model/Inventory'], function (View, InventoryModel)
 {
     function Inventory()
     {
-        this.inventory = Inventory;
+        this.inventory = InventoryModel;
     }
     
     var descriptions = {
@@ -22,7 +22,8 @@ define(['app/View', 'app/Model/Inventory'], function (View, InventoryModel)
         this.view = new View();
 	}
 
-    Inventory.prototype.addItem = function(item) {
+    Inventory.prototype.addItem = function(item)
+    {
         Inventory.addItem(item);
         this.redraw();
     }
@@ -39,7 +40,8 @@ define(['app/View', 'app/Model/Inventory'], function (View, InventoryModel)
         this.view.fetch('/templates/Components/inventory', 'inventory').done(cb);
     }
 
-    Inventory.prototype.redraw = function() {
+    Inventory.prototype.redraw = function()
+    {
         this.render(function(html) {
             $('.inventory').empty().html(html);
         });

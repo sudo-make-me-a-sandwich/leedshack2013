@@ -17,8 +17,13 @@ define(['app/Model/Storage'], function(Storage)
         return inventory;
     }
     
+    function hasItem(item) {
+        return !!inventory[item];
+    }
+    
 	return {
 		addItem: addItem,
-		getInventory: getInventory
+		getInventory: getInventory,
+		hasItem: hasItem
 	}
 });
