@@ -34,7 +34,17 @@ define(['app/Controller/Base', 'app/View', 'app/Model/SceneData'], function(Base
         });
 
         this.view.scene = sceneData;
-		this.view.render($('#controller'), '/templates/Game', 'game', {method: 'html'});
+		this.view.render($('#controller'), '/templates/Game', 'game', {method: 'html'}).done(postRender);
+	}
+	
+	/**
+	 * Perform actions after the scene is rendered
+	 * 
+	 * @return void
+	 */
+	function postRender()
+	{
+		console.log('Post scene render stuff');
 	}
 	
 	return {
