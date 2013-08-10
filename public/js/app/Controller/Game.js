@@ -22,6 +22,12 @@ define(['app/Controller/Base', 'app/View', 'app/Model/SceneData'], function(Base
 
         document.body.className = sceneName;
 
+        $.each(['north', 'south', 'east', 'west'], function(direction) {
+            if (sceneData[direction]) {
+                View[direction] = sceneData.getScene(sceneData[direction]);
+            }
+        });
+
         View.scene = sceneData;
 		View.render($('#controller'), '/templates/Game', 'game', {method: 'html'});
 	}
