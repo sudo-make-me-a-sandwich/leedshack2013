@@ -22,6 +22,9 @@ define([
                 cb();
             });
         }
+        else {
+            cb();
+        }
 	}
 	
     function postRender()

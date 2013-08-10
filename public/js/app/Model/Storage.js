@@ -25,7 +25,11 @@ define(function()
 	 */
 	function getData(key)
 	{
-		return JSON.parse(localStorage.getItem(key));
+        var data = localStorage.getItem(key);
+        if (data) {
+		    return JSON.parse(data);
+        }
+        return null;
 	}
 	
 	return {
