@@ -1,5 +1,5 @@
 /**
- * Choose sport controller. :-)
+ * Main game controller. :-)
  */
 define(['app/Controller/Base', 'app/View', 'app/Model/SceneData'], function(BaseController, View, SceneData)
 {
