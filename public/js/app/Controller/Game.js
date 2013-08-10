@@ -7,9 +7,10 @@ define([
     'app/Model/SceneData',
     'app/Model/KeyChain',
     'app/Model/Storage',
-    'app/Components/KeyChain'
+    'app/Components/KeyChain',
+    'app/Components/Inventory'
 
-], function(BaseController, View, SceneData, KeyChain, Storage, KeyChainComponent)
+], function(BaseController, View, SceneData, KeyChain, Storage, KeyChainComponent, Inventory)
 {
 	/**
 	 * Start this controller
@@ -86,10 +87,17 @@ define([
         Storage.setData('previousScene', sceneData);
 	}
 	
-    function addSubComponents() {
+    function addSubComponents()
+    {
         this.keyChain = new KeyChainComponent();
         this.keyChain.init();
         this.keyChain.render(function(html){
+            this.view.components.push(html);
+        }.bind(this));
+        
+        this.inventory = new Inventory();
+        this.inventory.init();
+        this.inventory.render(function(html){
             this.view.components.push(html);
         }.bind(this));
     }
