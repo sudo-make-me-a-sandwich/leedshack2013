@@ -24,7 +24,7 @@ define(['app/View', 'app/Model/Inventory'], function (View, InventoryModel)
 
     Inventory.prototype.addItem = function(item)
     {
-        Inventory.addItem(item);
+    	InventoryModel.addItem(item);
         this.redraw();
     }
 
