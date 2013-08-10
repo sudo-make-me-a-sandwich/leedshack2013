@@ -19,7 +19,7 @@ define(function()
             'description': 'Entrance'
         },
         'mainHall' : {
-            'south': 'enterance',
+            'south': 'entrance',
             'name': 'mainHall',
             'description': 'Main Hall'
         }
