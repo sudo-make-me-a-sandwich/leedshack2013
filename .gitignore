@@ -1,6 +1,7 @@
 /.settings
 /.buildpath
 /.project
+/logs
 /tags
 /bootstrap/compiled.php
 /vendor
