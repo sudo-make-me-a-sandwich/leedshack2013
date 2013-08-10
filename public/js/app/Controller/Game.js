@@ -60,7 +60,7 @@ define([
             }
         });
         
-        addSubComponents(this.view);
+        addSubComponents.call(this);
         
         this.view.scene = sceneData;
 		require(['app/Controller/Scenes/' + sceneData.name], function(scene)
@@ -77,7 +77,7 @@ define([
                             scene.postRender();
                         }
                     });
-                });
+                }, _this);
             }
             else {
                 _this.view.render($('#controller'), '/templates/Game', 'game', {method: 'html'}).done(postRender);
@@ -86,12 +86,12 @@ define([
         Storage.setData('previousScene', sceneData);
 	}
 	
-    function addSubComponents(view) {
+    function addSubComponents() {
         this.keyChain = new KeyChainComponent();
         this.keyChain.init();
         this.keyChain.render(function(html){
-            view.components.push(html);
-        });
+            this.view.components.push(html);
+        }.bind(this));
     }
 
 	/**

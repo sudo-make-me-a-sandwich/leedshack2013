@@ -4,7 +4,9 @@
  * Access and Set local storage data
  */
 
-define(['app/Model/Storage'], function(Storage)
+define([
+'app/Model/Storage'
+], function(Storage)
 {
     var keys = Storage.getData('KeyChainData') || {};
 
