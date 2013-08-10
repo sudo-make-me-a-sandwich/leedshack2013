@@ -41,7 +41,7 @@ define([
 
     Key.prototype.redraw = function() {
         this.render(function(html) {
-            $('.keychain').empty().html(html);
+            $('.keychain').replaceWith(html);
         });
     }
 
