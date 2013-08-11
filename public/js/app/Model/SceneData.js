@@ -116,7 +116,7 @@ define(function()
                 'image': 'ui/qm.png'
             },
             {
-                'description': 'Fish!',
+                'description': 'Blue fin Tuna, the largest length reported is 180inches (458cm) and the maximum weight reported is 1,506lbs (684kg). They can swim at speeds up to 45mph (72.5kph)',
                 'top': 59,
                 'left': 268,
                 'height': 60,
