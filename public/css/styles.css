@@ -449,6 +449,14 @@
     padding: 4px 8px;
 }
 
+.exhibit .tooltip.top{
+    bottom: 100%;
+    top: auto;
+}
+.exhibit .tooltip.left{
+    right: 0px;
+}
+
 .exhibit:hover .tooltip {
     display: block;
 }

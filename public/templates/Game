@@ -69,7 +69,7 @@
 		{{#scene.exhibits}}
 	        <div class="exhibit" style="top: {{top}}px; left: {{left}}px; height: {{height}}px; width: {{width}}px;{{#image}} background-image: url('/images/{{image}}');{{/image}}">
                 
-	            <div class="tooltip">
+	            <div class="tooltip {{tooltip}}">
 	                {{description}}
 	            </div>
 	        </div>
