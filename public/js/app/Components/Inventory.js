@@ -9,7 +9,7 @@ define(['app/View', 'app/Model/Inventory'], function (View, InventoryModel)
     }
     
     var descriptions = {
-        'leaves': 'Some delicious leaves of doom. No, not of doom - really they are delightful, and not doomy at all.',
+        'leaves': 'Some delicious leaves.',
     };
     
 	/**
