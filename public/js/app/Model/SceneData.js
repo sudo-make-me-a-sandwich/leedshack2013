@@ -34,7 +34,16 @@ define(function()
             'title': 'Entrance',
             'description': "You're standing in the grand entrance hall of the Leeds City Museum. " +
             	"Ahead of you a flight of stairs that leads both up and down. " +
-            	"There are doors leading off in all directions but they strangely appear to be locked."
+            	"There are doors leading off in all directions but they strangely appear to be locked.",
+            'exhibits': [{
+                'description': "This is a bust.",
+                'top': 410,
+                'left': 350,
+                'height': 50,
+                'width': 100,
+                'image': 'ui/qm-small.png',
+                'tooltip': 'top left'
+            }]
         },
         'leedsArena' : {
             'south': 'entrance',
