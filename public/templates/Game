@@ -67,8 +67,7 @@
 		</div>
 		
 		{{#scene.exhibits}}
-	        <div class="item" style="top: {{top}}px; left: {{left}}px; height: {{height}}px; width: {{width}}px;">
-	            <img src="/images/scenes/{{scene.name}}/{{name}}.png">
+	        <div class="exhibit" style="top: {{top}}px; left: {{left}}px; height: {{height}}px; width: {{width}}px;">
 	            <div class="tooltip">
 	                {{description}}
 	            </div>
