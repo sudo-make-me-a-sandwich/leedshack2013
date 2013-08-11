@@ -66,8 +66,9 @@ define(function()
                 'description': 'The elephant must have been enormous and quite old. Ivory was worth a great deal to both European and Asian carvers of precious ornaments. Merchants could grow rich by sourcing and controlling the trade.',
                 'top': 540,
                 'left': 700,
-                'height': 75,
+                'height': 50,
                 'width': 100,
+                'image': 'ui/qm-small.png',
                 'tooltip': 'top left'
             }]
         },
@@ -94,7 +95,7 @@ define(function()
                 	'Nor were its bones actually black: Victorian collectors stained them to add an authentic peat-bog look.',
                 'top': 0,
                 'left': 150,
-                'height': 600,
+                'height': 550,
                 'width': 700,
             }]
         },
@@ -107,7 +108,7 @@ define(function()
             'title': 'Life On Earth West',
             'description': '',
             'exhibits': [{
-                'description': 'Polar Bear!',
+                'description': 'Polar bears actually have black skins and colourless hair - but those thick, hollow hairs reflect light to give its white-looking coat',
                 'top': 418,
                 'left': 238,
                 'height': 60,
