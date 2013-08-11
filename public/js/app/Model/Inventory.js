@@ -12,17 +12,25 @@ define(['app/Model/Storage'], function(Storage)
         Storage.setData('InventoryData', inventory);
     }
     
+    function removeItem(item)
+    {
+    	inventory[item] = false;
+    	Storage.setData('InventoryData', inventory);
+    }
+    
     function getInventory()
     {
         return inventory;
     }
     
-    function hasItem(item) {
+    function hasItem(item)
+    {
         return !!inventory[item];
     }
     
 	return {
 		addItem: addItem,
+		removeItem: removeItem,
 		getInventory: getInventory,
 		hasItem: hasItem
 	}

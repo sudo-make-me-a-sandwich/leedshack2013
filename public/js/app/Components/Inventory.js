@@ -33,8 +33,11 @@ define(['app/View', 'app/Model/Inventory'], function (View, InventoryModel)
         var items = InventoryModel.getInventory();
         this.view.inventory = new Array();
         
-        for (i in items) {
-            this.view.inventory.push({item: i, description: descriptions[i]});
+        for (i in items)
+        {
+        	if (items[i]) {
+        		this.view.inventory.push({item: i, description: descriptions[i]});
+        	}
         }
 
         this.view.fetch('/templates/Components/inventory', 'inventory').done(cb);
