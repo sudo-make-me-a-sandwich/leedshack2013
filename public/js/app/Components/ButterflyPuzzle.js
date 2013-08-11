@@ -3,8 +3,8 @@
  */
 define(['app/View', 'app/Model/Inventory'], function (View, Inventory)
 {
-    function ButterflyPuzzle() {}
-
+    function ButterflyPuzzle() { }
+    
 	/**
 	 * Initialise this component
 	 * 
@@ -26,6 +26,11 @@ define(['app/View', 'app/Model/Inventory'], function (View, Inventory)
     ButterflyPuzzle.prototype.onClick = function(cb)
     {
        $('.startPuzzle').click(cb);
+    }
+    
+    ButterflyPuzzle.prototype.solve = function(cb)
+    {
+    	$('.solve').click(cb);
     }
     
     return ButterflyPuzzle;
