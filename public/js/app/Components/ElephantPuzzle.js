@@ -22,10 +22,20 @@ define(['app/View', 'app/Model/Inventory'], function (View, Inventory)
     	 */
     	this.render = function(cb)
     	{
-        	this.view.hasLeaves = Inventory.hasItem('leaves');
             this.view.fetch('/templates/Components/ElephantPuzzle', 'puzzle').done(cb);
     	}
     	
+    	/**
+    	 * Redraw the puzzle UI
+    	 * 
+    	 */
+        this.redraw = function()
+        {
+            this.render(function(html) {
+                $('.elephantPuzzle').replaceWith(html).reAlign();
+            });
+        }
+        
         /**
          * On click actions
          * Can only be called post render
@@ -35,6 +45,12 @@ define(['app/View', 'app/Model/Inventory'], function (View, Inventory)
     	this.onClick = function(cb)
     	{
     		$('.elephantPuzzle .puzzleTitle').click(cb);
+    		
+    		$('.elephantPuzzle .hungry').click(function(element)
+    		{
+    			this.view.hasBeenFed = Inventory.hasItem('leaves');
+    			this.redraw();
+    		}.bind(this));
     	}
     	
     	/**

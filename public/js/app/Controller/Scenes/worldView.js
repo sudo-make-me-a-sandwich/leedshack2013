@@ -27,6 +27,8 @@ define(['app/Components/ElephantPuzzle'], function(ElephantPuzzle)
 	 */
     function postRender()
     {
+    	$('.elephantPuzzle .puzzleContent').hide();
+    	
         this.puzzle.onClick(function() {
             $('.elephantPuzzle .puzzleContent').show();
         }.bind(this));

@@ -49,8 +49,8 @@ define(function()
             'east': 'entrance',
             'name': 'worldView',
             'title': 'World View',
-            'description': "Numerous cambinets containing exhibits from Africa and Asia surround the centre of the room. " +
-            	"A loud violent banging noise eminates from a large wooden box in the corner."
+            'description': "Numerous cambinets containing exhibits from Africa line the walls of the room. " +
+            	"A loud violent banging noise eminates from an ancient clay pot at the far end."
         },
         'lifeOnEarthSouth' : {
             'up': 'entrance',

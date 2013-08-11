@@ -383,11 +383,11 @@
 
 .elephantPuzzle .puzzleTitle {
 	position: absolute;
-	bottom: 180px;
-	right: 140px;
+	top: 390px;
+	left: 420px;
 	text-indent: -9000px;
-	width: 200px;
-	height: 90px;
+	width: 50px;
+	height: 50px;
 	cursor: pointer;
 }
 
