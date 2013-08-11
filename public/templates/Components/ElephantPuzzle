@@ -6,7 +6,7 @@
 			{{^hasBeenFed}}
 				<img src="/images/scenes/worldView/elephant.png" alt="Elephant" class="hungry" />
 				
-				<p>A huge elephant emerges from the box. He's missing one tusk and doesn't look particularly happy.</p>
+				<p>A huge elephant emerges from the pot. He's missing one tusk and doesn't look particularly happy.</p>
 				<p>Perhaps you should find some way to appease him...</p>
 			{{/hasBeenFed}}
 			
