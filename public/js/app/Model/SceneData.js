@@ -105,7 +105,23 @@ define(function()
             'east': 'lifeOnEarthEast',
             'name': 'lifeOnEarthWest',
             'title': 'Life On Earth West',
-            'description': ''
+            'description': '',
+            'exhibits': [{
+                'description': 'Polar Bear!',
+                'top': 418,
+                'left': 238,
+                'height': 60,
+                'width': 60,
+                'image': 'ui/qm.png'
+            },
+            {
+                'description': 'Fish!',
+                'top': 59,
+                'left': 268,
+                'height': 60,
+                'width': 60,
+                'image': 'ui/qm.png'
+            }]
         },
         'lifeOnEarthNorth' : {
             'up': 'entrance',
