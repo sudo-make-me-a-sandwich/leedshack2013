@@ -62,7 +62,7 @@ define(function()
         },
         'lifeOnEarthSouth' : {
             'up': 'entrance',
-            'north': 'lifeOnEarthNorth',
+            //'north': 'lifeOnEarthNorth',
             'west': 'lifeOnEarthWest',
             'east': 'lifeOnEarthEast',
             'name': 'lifeOnEarthSouth',
@@ -85,7 +85,7 @@ define(function()
         },
         'lifeOnEarthWest' : {
             'up': 'entrance',
-            'north': 'lifeOnEarthNorth',
+            //'north': 'lifeOnEarthNorth',
             'south': 'lifeOnEarthSouth',
             'east': 'lifeOnEarthEast',
             'name': 'lifeOnEarthWest',
@@ -103,12 +103,12 @@ define(function()
         },
         'lifeOnEarthEast' : {
             'up': 'entrance',
-            'north': 'lifeOnEarthNorth',
+            //'north': 'lifeOnEarthNorth',
             'south': 'lifeOnEarthSouth',
             'west': 'lifeOnEarthWest',
             'name': 'lifeOnEarthEast',
             'title': 'Life On Earth East',
-            'description': ''
+            'description': 'Down here you find a very scary looking tiger.'
         }
     };
 
