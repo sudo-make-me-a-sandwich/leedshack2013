@@ -58,11 +58,13 @@ define(function()
             'title': 'The Collectors Cabinet',
             'description': 'The Collectors Cabinet',
             'exhibits': [{
-                'description': 'This is a thing-a-mi-bob',
-                'top': 100,
-                'left': 10,
-                'height': 30,
-                'width': 30,
+                'description': 'Cabinet!',
+                'top': 410,
+                'left': 290,
+                'height': 300,
+                'width': 400,
+                'image': 'scenes/collectorsCabinet/cabinet.png',
+                'tooltip': 'top left'
             }]
         },
         'worldView' : {
