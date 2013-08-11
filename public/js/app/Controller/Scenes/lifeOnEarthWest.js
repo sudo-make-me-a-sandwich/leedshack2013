@@ -8,16 +8,23 @@ define(['app/Components/ButterflyPuzzle'], function(ButterflyPuzzle)
 	 * 
 	 * @return void
 	 */
-	function start(view, cb)
+	function start(view, cb, game)
 	{
-        this.puzzle = new ButterflyPuzzle();
-        this.puzzle.init();
-        
-        this.puzzle.render(function(html)
-        {
-            view.components.push(html);
-            cb();
-        });
+		this.keyChain = game.keyChain;
+		this.puzzle = new ButterflyPuzzle();
+		
+		if (!this.keyChain.keyChain.hasKey("leedsArena"))
+		{   
+	        this.puzzle.init();
+	        
+	        this.puzzle.render(function(html)
+	        {
+	            view.components.push(html);
+	            cb();
+	        });
+		} else {
+			cb();
+		}
 	}
 	
 	/**
@@ -31,6 +38,13 @@ define(['app/Components/ButterflyPuzzle'], function(ButterflyPuzzle)
         {
             $('.butterflyPuzzle').show();
         }.bind(this));
+    	
+    	this.puzzle.solve(function()
+		{
+    		alert("What! its not identical, thanks for noticing you can have this key.");
+ 	 	   	$('.startPuzzle, .butterflyPuzzle').remove();
+ 	 	   	this.keyChain.addKey("leedsArena");
+		}.bind(this));
     }
 
 	return {
