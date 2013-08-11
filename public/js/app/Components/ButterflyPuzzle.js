@@ -27,10 +27,6 @@ define(['app/View', 'app/Model/Inventory'], function (View, Inventory)
     {
        $('.startPuzzle').click(cb);
     }
-
-    ButterflyPuzzle.prototype.remove = function() {
-    	$('.startPuzzle').remove();
-    }
     
     return ButterflyPuzzle;
 });
