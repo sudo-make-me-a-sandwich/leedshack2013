@@ -36,7 +36,7 @@ define(['app/Components/ButterflyPuzzle'], function(ButterflyPuzzle)
     {
     	this.puzzle.onClick(function()
         {
-            $('.butterflyPuzzle').show();
+            $('.butterflyPuzzle').show().reAlign();
         }.bind(this));
     	
     	this.puzzle.solve(function()
