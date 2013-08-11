@@ -327,6 +327,8 @@
 
 
 
+
+
 /*----------------------------------------------------------------------------------------------------------------*\
     LIFE ON EARTH SOUTH
 \*----------------------------------------------------------------------------------------------------------------*/
@@ -355,8 +357,8 @@
 	cursor: pointer;
 	
 	position: absolute;
-	top: 580px;
-	left: 130px;
+	top: 225px;
+	left: 827px;
 }
 
 .lifeOnEarthWest .butterflyPuzzle .solve {
@@ -445,6 +447,14 @@
     min-width: 300px;
     text-align: center;
     padding: 4px 8px;
+}
+
+.exhibit .tooltip.top{
+    bottom: 100%;
+    top: auto;
+}
+.exhibit .tooltip.left{
+    right: 0px;
 }
 
 .exhibit:hover .tooltip {
