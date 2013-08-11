@@ -61,7 +61,15 @@ define(function()
             'name': 'worldView',
             'title': 'World View',
             'description': "Numerous cambinets containing exhibits from Africa line the walls of the room. " +
-            	"A loud violent banging noise eminates from an ancient clay pot at the far end."
+            	"A loud violent banging noise eminates from an ancient clay pot at the far end.",
+            'exhibits': [{
+                'description': 'The elephant must have been enormous and quite old. Ivory was worth a great deal to both European and Asian carvers of precious ornaments. Merchants could grow rich by sourcing and controlling the trade.',
+                'top': 540,
+                'left': 700,
+                'height': 75,
+                'width': 100,
+                'tooltip': 'top left'
+            }]
         },
         'lifeOnEarthSouth' : {
             'up': 'entrance',
