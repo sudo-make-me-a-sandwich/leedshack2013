@@ -81,14 +81,7 @@ define(function()
             'title': 'Life On Earth South',
             'description': "You're standing a large circular room west of a white house. In front of you a ginormous Elk skeleton " +
             	"dominates your view.",
-            'exhibits': [{
-                'description':  'A blue fin tuna, larger than any tuna you are likley o find today. ' +
-                	'If you\'re eating tuna at home today, you\'ll be eating the smaller yellow fin',
-                'top': 470,
-                'left': 0,
-                'height': 100,
-                'width': 150,
-            },
+            'exhibits': [
             {
                 'description':'The Irish Elk is misleadingly named, as the creature was not an elk ' +
                 	'but a giant dear, found in many other countries besides Ireland more than 10,000 years ago. ' +
