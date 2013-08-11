@@ -11,7 +11,7 @@
 			{{/hasBeenFed}}
 			
 			{{#hasBeenFed}}
-				<img src="/images/scenes/worldView/elephantFed.jpg" alt="Elephant" />
+				<img src="/images/scenes/worldView/elephantFed2.jpg" alt="Elephant" />
 				
 				<p>You feed the elephant some leaves. He seems to have calmed down and no longer wants to sit on you.</p>
 			{{/hasBeenFed}}
