@@ -108,7 +108,7 @@ define(function()
             'title': 'Life On Earth West',
             'description': '',
             'exhibits': [{
-                'description': 'Polar Bear!',
+                'description': 'Polar bears actually have black skins and colourless hair - but those thick, hollow hairs reflect light to give its white-looking coat',
                 'top': 418,
                 'left': 238,
                 'height': 60,
