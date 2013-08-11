@@ -50,8 +50,12 @@ define(['app/View', 'app/Model/Inventory', 'app/Model/Storage'], function (View,
     		$('.elephantPuzzle .hungry').click(function(element)
     		{
     			this.view.hasBeenFed = Inventory.hasItem('leaves');
+    			
+    			if (Inventory.hasItem('leaves')) {
+    				Storage.setData('ElephantPuzzle', true);
+    			}
+    			
     			Inventory.removeItem('leaves');
-    			Storage.setData('ElephantPuzzle', true);
     			this.redraw();
     		}.bind(this));
     	}
