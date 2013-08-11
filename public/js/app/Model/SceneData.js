@@ -61,7 +61,14 @@ define(function()
             'title': 'Life On Earth South',
             'description': '',
             'exhibits': [{
-                'description': 'This is an Irish Elk, which is neither irish nor an elk',
+                'description':  'A blue fin tuna, larger than any tuna you are likley o find today. If you\'re eating tuna at home today, you\'ll be eating the smaller yellow fin',
+                'top': 470,
+                'left': 0,
+                'height': 100,
+                'width': 150,
+            },
+            {
+                'description':'This is an Irish Elk, which is neither irish nor an elk',
                 'top': 0,
                 'left': 150,
                 'height': 600,
