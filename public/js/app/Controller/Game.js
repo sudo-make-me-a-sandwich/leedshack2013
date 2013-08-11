@@ -9,7 +9,6 @@ define([
     'app/Model/Storage',
     'app/Components/KeyChain',
     'app/Components/Inventory'
-
 ], function(BaseController, View, SceneData, KeyChain, Storage, KeyChainComponent, Inventory)
 {
 	/**
@@ -34,7 +33,8 @@ define([
         
 	    var sceneData = SceneData.getScene(sceneName);
 	    
-        if (KeyChain.isLocked(sceneData)) {
+        if (KeyChain.isLocked(sceneData))
+        {
             sceneData = {
                 name: 'locked',
                 title: sceneData.title,
@@ -87,17 +87,26 @@ define([
         Storage.setData('previousScene', sceneData);
 	}
 	
+	/**
+	 * Add sub components to the UI
+	 *
+	 * @return void
+	 */
     function addSubComponents()
     {
+    	// Keychain
         this.keyChain = new KeyChainComponent();
         this.keyChain.init();
-        this.keyChain.render(function(html){
+        
+        this.keyChain.render(function(html) {
             this.view.uicomponents.push(html);
         }.bind(this));
         
+        // Inventory
         this.inventory = new Inventory();
         this.inventory.init();
-        this.inventory.render(function(html){
+        
+        this.inventory.render(function(html) {
             this.view.uicomponents.push(html);
         }.bind(this));
     }
