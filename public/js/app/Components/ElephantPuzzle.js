@@ -1,7 +1,7 @@
 /**
  * Elephant puzzle component
  */
-define(['app/View', 'app/Model/Inventory'], function (View, Inventory)
+define(['app/View', 'app/Model/Inventory', 'app/Model/Storage'], function (View, Inventory, Storage)
 {
     function ElephantPuzzle()
     {
@@ -22,6 +22,7 @@ define(['app/View', 'app/Model/Inventory'], function (View, Inventory)
     	 */
     	this.render = function(cb)
     	{
+    		this.view.hasBeenFed = Storage.getData('ElephantPuzzle');
             this.view.fetch('/templates/Components/ElephantPuzzle', 'puzzle').done(cb);
     	}
     	
@@ -49,6 +50,8 @@ define(['app/View', 'app/Model/Inventory'], function (View, Inventory)
     		$('.elephantPuzzle .hungry').click(function(element)
     		{
     			this.view.hasBeenFed = Inventory.hasItem('leaves');
+    			Inventory.removeItem('leaves');
+    			Storage.setData('ElephantPuzzle', true);
     			this.redraw();
     		}.bind(this));
     	}
