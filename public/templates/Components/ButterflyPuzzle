@@ -1,0 +1,13 @@
+<script id="puzzle" type="text/html">
+	<div class="startPuzzle">
+		<img src="/images/scenes/lifeOnEarthWest/butterfly.jpg" alt="Butterfly" />
+	</div>
+	
+	<div class="butterflyPuzzle ui-puzzle center-align" style="display: none">
+		<img src="/images/scenes/lifeOnEarthWest/butterfly.jpg" alt="Butterfly" />
+		
+		<div class="solve"></div>
+		
+		<div>A butterfly with perfect symmetry, or does it?</div>
+	</div>
+</script>
