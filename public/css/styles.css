@@ -300,6 +300,32 @@
 
 
 /*----------------------------------------------------------------------------------------------------------------*\
+    LIFE ON EARTH SOUTH
+\*----------------------------------------------------------------------------------------------------------------*/
+.lifeOnEarthSouth .gameContainer {
+	background: url("../images/scenes/lifeOnEarthSouth/background.jpg") no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*\
+    LIFE ON EARTH WEST
+\*----------------------------------------------------------------------------------------------------------------*/
+.lifeOnEarthWest .gameContainer {
+	background: url("../images/scenes/lifeOnEarthWest/background.jpg") no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+
+
+
+
+/*----------------------------------------------------------------------------------------------------------------*\
     COLLECTORS CABINET
 \*----------------------------------------------------------------------------------------------------------------*/
 .collectorsCabinet .gameContainer {
