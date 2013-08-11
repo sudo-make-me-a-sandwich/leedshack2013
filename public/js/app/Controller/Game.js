@@ -118,17 +118,22 @@ define([
 	 */
 	function postRender()
 	{
-		//centre align things vertically & horizontally
-		$(".center-align").each(function()
-        {
-			$(this).css({
-				"margin-left": "-" + $(this).outerWidth() / 2 + "px",
-				"margin-top": "-" + $(this).outerHeight() / 2 + "px",
-				"position": "absolute",
-				"left": "50%",
-				"top": "50%"
-			});
-        });
+		jQuery.fn.reAlign = function()
+		{
+			//centre align things vertically & horizontally
+			$(".center-align").each(function()
+	        {
+				$(this).css({
+					"margin-left": "-" + $(this).outerWidth() / 2 + "px",
+					"margin-top": "-" + $(this).outerHeight() / 2 + "px",
+					"position": "absolute",
+					"left": "50%",
+					"top": "50%"
+				});
+	        });
+		}
+		
+		$('.gameContainer').reAlign();
 	}
 	
 	return {
