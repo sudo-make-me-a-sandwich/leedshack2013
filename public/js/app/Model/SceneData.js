@@ -68,7 +68,7 @@ define(function()
                 'width': 150,
             },
             {
-                'description':'This is an Irish Elk, which is neither irish nor an elk',
+                'description':'The Irish Elk is misleadingly named, as the creature was not an elk but a giant dear, found in many other countries besides Ireland more than 10,000 years ago. Nor were its bones actually black: Victorian collectors stained them to add an authentic peat-bog look.',
                 'top': 0,
                 'left': 150,
                 'height': 600,
