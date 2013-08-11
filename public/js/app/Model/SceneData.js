@@ -11,7 +11,15 @@ define(function()
             'north': 'entrance',
             'name': 'frontDoor',
             'title': 'Outside',
-            'description': 'Outside'
+            'description': 'The new Leeds City Museum has been eighty years in the making but its story goes back more than two centuries',
+            'exhibits': [{
+                'description': 'The building which currently houses Leeds Museum was originaly built between 1865 and 1868, transformation of the building started in 2005 and the Leeds City Museum',
+                'top': 100,
+                'left': 350,
+                'height': 100,
+                'width': 324,
+                'image': 'ui/qm.png'
+            }]
         },
         'entrance' : {
             'south': 'frontDoor',
