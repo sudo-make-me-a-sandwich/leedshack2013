@@ -1,7 +1,7 @@
 /**
- * Storage model
+ * Scene data model
  * 
- * Access and Set local storage data
+ * Contains the bulk of the game content.
  */
 
 define(function()
@@ -119,13 +119,13 @@ define(function()
         }
     };
 
-    function getScene (sceneName) {
+    function getScene (sceneName)
+    {
         if (!data[sceneName]) {
             throw new Error('Scene: [' + sceneName + '] Not found');
         }
         return data[sceneName];
     }
-
 
 	return {
 		getScene: getScene
