@@ -318,8 +318,19 @@
 .puzzleContent {
 	width: 600px;
 	height: 400px;
+	color: #fff;
 }
 
 .puzzleContent img {
 	width: auto;
+}
+
+.elephantPuzzle .puzzleTitle {
+	position: absolute;
+	bottom: 180px;
+	right: 140px;
+	text-indent: -9000px;
+	width: 200px;
+	height: 90px;
+	cursor: pointer;
 }
