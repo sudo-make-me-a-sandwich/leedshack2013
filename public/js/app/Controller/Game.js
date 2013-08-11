@@ -39,7 +39,15 @@ define([
                 name: 'locked',
                 title: sceneData.title,
                 description: 'This room is locked! You need to find the key to enter!',
-                south: this.previousScene.name 
+                south: this.previousScene.name,
+                'exhibits': [{
+                    'description': 'This door is locked, you\'ll need to turn back for now. See if you can find a key somewhere... Perhaps this smug looking monkey has seen it?',
+                    'top': 200,
+                    'left': 250,
+                    'height': 350,
+                    'width': 524,
+                    'image': 'ui/qm.png'
+                }] 
             };
         }
 
@@ -93,7 +101,9 @@ define([
                 _this.view.fetch('/templates/Game', 'game', {method: 'html'}).done(renderFunction);
             }
 		});
-        Storage.setData('previousScene', sceneData);
+        if (sceneData.name != 'locked') {
+            Storage.setData('previousScene', sceneData);
+        }
 	}
 	
 	/**
@@ -138,7 +148,7 @@ define([
 					"position": "absolute",
 					"left": "50%",
 					"top": "50%"
-				});
+                });
 	        });
 		}
 
