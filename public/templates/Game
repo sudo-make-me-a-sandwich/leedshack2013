@@ -76,5 +76,7 @@
 	    {{/scene.exhibits}}
 		    
 	    {{#components}}{{{.}}}{{/components}}
+
+        <div class="startOver">Start Over</div>
 	</div>
 </script>

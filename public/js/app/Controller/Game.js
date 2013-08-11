@@ -132,6 +132,11 @@ define([
 				});
 	        });
 		}
+
+        $('.startOver').click(function() {
+            localStorage.clear();
+            window.location = '/';
+        });
 		
 		$('.gameContainer').reAlign();
 	}

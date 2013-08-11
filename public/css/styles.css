@@ -418,3 +418,9 @@
 .exhibit:hover .tooltip {
     display: block;
 }
+
+.startOver {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
