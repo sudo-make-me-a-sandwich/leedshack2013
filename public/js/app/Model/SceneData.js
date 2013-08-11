@@ -70,16 +70,20 @@ define(function()
             'east': 'lifeOnEarthEast',
             'name': 'lifeOnEarthSouth',
             'title': 'Life On Earth South',
-            'description': '',
+            'description': "You're standing a large circular room west of a whitehouse. In front of you a ginormous elk skeleton " +
+            	"dominates your view.",
             'exhibits': [{
-                'description':  'A blue fin tuna, larger than any tuna you are likley o find today. If you\'re eating tuna at home today, you\'ll be eating the smaller yellow fin',
+                'description':  'A blue fin tuna, larger than any tuna you are likley o find today. ' +
+                	'If you\'re eating tuna at home today, you\'ll be eating the smaller yellow fin',
                 'top': 470,
                 'left': 0,
                 'height': 100,
                 'width': 150,
             },
             {
-                'description':'The Irish Elk is misleadingly named, as the creature was not an elk but a giant dear, found in many other countries besides Ireland more than 10,000 years ago. Nor were its bones actually black: Victorian collectors stained them to add an authentic peat-bog look.',
+                'description':'The Irish Elk is misleadingly named, as the creature was not an elk ' +
+                	'but a giant dear, found in many other countries besides Ireland more than 10,000 years ago. ' +
+                	'Nor were its bones actually black: Victorian collectors stained them to add an authentic peat-bog look.',
                 'top': 0,
                 'left': 150,
                 'height': 600,
@@ -127,7 +131,7 @@ define(function()
             'west': 'lifeOnEarthWest',
             'name': 'lifeOnEarthEast',
             'title': 'Life On Earth East',
-            'description': 'Down here you find a very scary looking tiger.'
+            'description': "Down here you find a very scary looking tiger. Where did it come from? India - that's where!"
         }
     };
 
