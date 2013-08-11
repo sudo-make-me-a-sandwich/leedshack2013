@@ -78,7 +78,7 @@ define(function()
             'east': 'lifeOnEarthEast',
             'name': 'lifeOnEarthSouth',
             'title': 'Life On Earth South',
-            'description': "You're standing a large circular room west of a whitehouse. In front of you a ginormous elk skeleton " +
+            'description': "You're standing a large circular room west of a white house. In front of you a ginormous Elk skeleton " +
             	"dominates your view.",
             'exhibits': [{
                 'description':  'A blue fin tuna, larger than any tuna you are likley o find today. ' +
@@ -139,7 +139,15 @@ define(function()
             'west': 'lifeOnEarthWest',
             'name': 'lifeOnEarthEast',
             'title': 'Life On Earth East',
-            'description': "Down here you find a very scary looking tiger. Where did it come from? India - that's where!"
+            'description': "Aaarrgh! A scary sight indeed.",
+            'exhibits': [{
+                'description': "This Bengal tiger has an interesting history.",
+                'top': 540,
+                'left': 700,
+                'height': 75,
+                'width': 100,
+                'tooltip': 'top left'
+            }]
         }
     };
 
