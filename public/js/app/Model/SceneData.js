@@ -38,7 +38,6 @@ define(function()
             'title': 'The Collectors Cabinet',
             'description': 'The Collectors Cabinet',
             'exhibits': [{
-                'name': 'thing',
                 'description': 'This is a thing-a-mi-bob',
                 'top': 100,
                 'left': 10,
@@ -60,7 +59,21 @@ define(function()
             'east': 'lifeOnEarthEast',
             'name': 'lifeOnEarthSouth',
             'title': 'Life On Earth South',
-            'description': ''
+            'description': '',
+            'exhibits': [{
+                'description':  'A blue fin tuna, larger than any tuna you are likley o find today. If you\'re eating tuna at home today, you\'ll be eating the smaller yellow fin',
+                'top': 470,
+                'left': 0,
+                'height': 100,
+                'width': 150,
+            },
+            {
+                'description':'This is an Irish Elk, which is neither irish nor an elk',
+                'top': 0,
+                'left': 150,
+                'height': 600,
+                'width': 700,
+            }]
         },
         'lifeOnEarthWest' : {
             'up': 'entrance',
@@ -78,7 +91,7 @@ define(function()
             'east': 'lifeOnEarthEast',
             'name': 'lifeOnEarthNorth',
             'title': 'Life On Earth North',
-            'description': ''
+            'description': '',
         },
         'lifeOnEarthEast' : {
             'up': 'entrance',
