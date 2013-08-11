@@ -142,12 +142,15 @@ define(function()
             'title': 'Life On Earth East',
             'description': "Aaarrgh! A scary sight indeed.",
             'exhibits': [{
-                'description': "This Bengal tiger has an interesting history.",
-                'top': 540,
-                'left': 700,
+                'description': "This Bengal tiger has an interesting history. Shot nearly 150 years ago, " +
+                	"he looks slightly stretched because he spent many years flattened out as a rug before put " +
+                	"back into a tiger shape.",
+                'top': 210,
+                'left': 550,
                 'height': 75,
                 'width': 100,
-                'tooltip': 'top left'
+                'tooltip': 'top left',
+            	'image': 'ui/qm-small.png'
             }]
         }
     };
