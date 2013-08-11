@@ -244,10 +244,19 @@
 
 
 
+.sceneContainer {
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
 /*----------------------------------------------------------------------------------------------------------------*\
     FRONT DOOR
 \*----------------------------------------------------------------------------------------------------------------*/
-.frontDoor .gameContainer {
+.frontDoor .gameContainer .sceneContainer {
 	background: url("../images/scenes/frontDoor/background.jpg") no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -260,7 +269,7 @@
 /*----------------------------------------------------------------------------------------------------------------*\
     LOCKED DOOR
 \*----------------------------------------------------------------------------------------------------------------*/
-.locked .gameContainer {
+.locked .gameContainer .sceneContainer {
 	background: url("../images/scenes/locked/background.jpg") no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -273,7 +282,7 @@
 /*----------------------------------------------------------------------------------------------------------------*\
     ENTRANCE
 \*----------------------------------------------------------------------------------------------------------------*/
-.entrance .gameContainer {
+.entrance .gameContainer .sceneContainer {
 	background: url("../images/scenes/entrance/background.jpg") no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -298,7 +307,7 @@
 /*----------------------------------------------------------------------------------------------------------------*\
     WORLD VIEW
 \*----------------------------------------------------------------------------------------------------------------*/
-.worldView .gameContainer {
+.worldView .gameContainer .sceneContainer {
 	background: url("../images/scenes/worldView/background.jpg") no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -311,7 +320,7 @@
 /*----------------------------------------------------------------------------------------------------------------*\
     LEEDS ARENA
 \*----------------------------------------------------------------------------------------------------------------*/
-.leedsArena .gameContainer {
+.leedsArena .gameContainer .sceneContainer {
 	background: url("../images/scenes/leedsArena/background.jpg") no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -332,7 +341,7 @@
 /*----------------------------------------------------------------------------------------------------------------*\
     LIFE ON EARTH SOUTH
 \*----------------------------------------------------------------------------------------------------------------*/
-.lifeOnEarthSouth .gameContainer {
+.lifeOnEarthSouth .gameContainer .sceneContainer {
 	background: url("../images/scenes/lifeOnEarthSouth/background.jpg") no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -345,7 +354,7 @@
 /*----------------------------------------------------------------------------------------------------------------*\
     LIFE ON EARTH WEST
 \*----------------------------------------------------------------------------------------------------------------*/
-.lifeOnEarthWest .gameContainer {
+.lifeOnEarthWest .gameContainer .sceneContainer {
 	background: url("../images/scenes/lifeOnEarthWest/background.jpg") no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -379,7 +388,7 @@
 /*----------------------------------------------------------------------------------------------------------------*\
     LIFE ON EARTH EAST
 \*----------------------------------------------------------------------------------------------------------------*/
-.lifeOnEarthEast .gameContainer {
+.lifeOnEarthEast .gameContainer .sceneContainer {
 	background: url("../images/scenes/lifeOnEarthEast/background.jpg") no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -392,7 +401,7 @@
 /*----------------------------------------------------------------------------------------------------------------*\
     COLLECTORS CABINET
 \*----------------------------------------------------------------------------------------------------------------*/
-.collectorsCabinet .gameContainer {
+.collectorsCabinet .gameContainer .sceneContainer {
 	background: url("../images/scenes/collectorsCabinet/background.jpg") no-repeat;
 	background-position: center;
 	background-size: cover;

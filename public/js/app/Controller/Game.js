@@ -43,8 +43,6 @@ define([
             };
         }
 
-        document.body.className = sceneData.name;
-        
         var _this = this;
         $.each(['north', 'south', 'east', 'west', 'up', 'down'], function()
         {
@@ -66,22 +64,33 @@ define([
         this.view.scene = sceneData;
 		require(['app/Controller/Scenes/' + sceneData.name], function(scene)
 		{
+			$('.sceneContainer').fadeOut();
+			
+			var renderFunction = function(content)
+            {
+            	$('.sceneContainer').promise().done(function()
+            	{
+            		document.body.className = sceneData.name;
+            		
+                	$('#controller').empty().html(content);
+                    postRender();
+                    
+                    if (scene && scene.postRender) {
+                        scene.postRender();
+                    }
+                    
+                    $('.sceneContainer').fadeIn();
+            	});
+            };
+			
 			if (scene && scene.start)
 			{
-                scene.start(_this.view, function()
-                {
-                    _this.view.render($('#controller'), '/templates/Game', 'game', {method: 'html'}).done(function()
-                    {
-                        postRender();
-                        
-                        if (scene.postRender) {
-                            scene.postRender();
-                        }
-                    });
+                scene.start(_this.view, function() {
+                    _this.view.fetch('/templates/Game', 'game', {method: 'html'}).done(renderFunction);
                 }, _this);
             }
             else {
-                _this.view.render($('#controller'), '/templates/Game', 'game', {method: 'html'}).done(postRender);
+                _this.view.fetch('/templates/Game', 'game', {method: 'html'}).done(renderFunction);
             }
 		});
         Storage.setData('previousScene', sceneData);

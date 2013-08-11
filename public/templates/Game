@@ -1,5 +1,18 @@
 <script id="game" type="text/html">
 	<div class="gameContainer center-align">
+		<div class="sceneContainer">
+			{{#scene.exhibits}}
+		        <div class="exhibit" style="top: {{top}}px; left: {{left}}px; height: {{height}}px; width: {{width}}px;{{#image}} background-image: url('/images/{{image}}');{{/image}}">
+	                
+		            <div class="tooltip {{tooltip}}">
+		                {{description}}
+		            </div>
+		        </div>
+		    {{/scene.exhibits}}
+			    
+		    {{#components}}{{{.}}}{{/components}}
+		</div>
+		
 		<div class="ui">
 			<div class="area">
 				<h1>{{scene.title}}</h1>
@@ -66,17 +79,6 @@
 		    {{#uicomponents}}{{{.}}}{{/uicomponents}}
 		</div>
 		
-		{{#scene.exhibits}}
-	        <div class="exhibit" style="top: {{top}}px; left: {{left}}px; height: {{height}}px; width: {{width}}px;{{#image}} background-image: url('/images/{{image}}');{{/image}}">
-                
-	            <div class="tooltip {{tooltip}}">
-	                {{description}}
-	            </div>
-	        </div>
-	    {{/scene.exhibits}}
-		    
-	    {{#components}}{{{.}}}{{/components}}
-
         <div class="startOver">Start Over</div>
 	</div>
 </script>
